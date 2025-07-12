@@ -1,15 +1,3 @@
-Hello! My name is Tesfaye Venieri, and I'm a Computer Science for Management student at the University of Bologna. I'm passionate about transforming innovative ideas into real-world projects and applications.
-I'm currently seeking assistance with:
-
-Developing and implementing my creative project concepts
-Technical guidance for coding and software development
-Project planning and management strategies
-Turning abstract ideas into actionable development plans
-Business and technical feasibility analysis
-
-I'm particularly interested in projects that combine technology with practical management solutions. I'm looking for collaborative support to help bring my ideas from concept to completion.
-Could you help me brainstorm, develop, or provide technical guidance for my upcoming projects?"
-(https://www.instagram.com/)
 # 💫 About Me:
 Hello! My name is Tesfaye Venieri, and I'm a Computer Science for Management student at the University of Bologna. I'm passionate about transforming innovative ideas into real-world projects and applications.<br>I'm currently seeking assistance with:<br><br>Developing and implementing my creative project concepts<br>Technical guidance for coding and software development<br>Project planning and management strategies<br>Turning abstract ideas into actionable development plans<br>Business and technical feasibility analysis<br><br>I'm particularly interested in projects that combine technology with practical management solutions. I'm looking for collaborative support to help bring my ideas from concept to completion.<br>Could you help me brainstorm, develop, or provide technical guidance for my upcoming projects?"
 
