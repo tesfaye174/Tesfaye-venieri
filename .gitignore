@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+src_backup
+.env
+*.log
+lint_output.txt
+Antigravity-diagnostics.txt
+server/messages.json

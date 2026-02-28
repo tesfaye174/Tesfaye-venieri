@@ -1,76 +1,113 @@
-# 🚀 Tesfaye Venieri - Portfolio
-> **"Coding the Future with Hope"**
+# Tesfaye Venieri - Premium Professional Portfolio
 
-![Portfolio Preview](assets/logo.svg)
+<div align="center">
 
-Benvenuto nel repository del mio portfolio personale. Questo progetto non è solo una vetrina delle mie competenze tecniche, ma un racconto del mio percorso: dalle radici in Etiopia ("Tesfaye" significa *Speranza*) alla formazione in Management e Informatica a Bologna.
+**Coding the Future with Hope**
 
-## 🌟 Il Concetto: "Hope-Driven Mindset"
-Il sito è costruito attorno all'idea di essere un "ponte":
-- **Ponte Culturale**: Tra Addis Abeba e l'Italia.
-- **Ponte Professionale**: Tra il codice (Tech) e la strategia (Business).
-- **Design**: Colori **Navy Blue** (Tecnologia, Fiducia) e **Oro** (Speranza, Calore).
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen)](http://localhost:3000)
+[![Built with React](https://img.shields.io/badge/built%20with-React%2018-blue)](https://reactjs.org/)
+[![Vite Speed](https://img.shields.io/badge/powered%20by-Vite%205-purple)](https://vitejs.dev/)
 
-## 🛠️ Tech Stack
-Questo portfolio è stato realizzato con un approccio "Back to Basics" per garantire massime performance, accessibilità e controllo totale sul design.
+*Un portfolio professionale d'impatto che unisce lo sviluppo Full-Stack alla strategia di Management.*
 
-- **Core**: HTML5 Semantico, CSS3 (Variabili, Flexbox, Grid), JavaScript (ES6+).
-- **Design**: Custom CSS (No framework pesanti come Bootstrap/Tailwind).
-- **Icone**: SVG personalizzati e ottimizzati.
-- **Performance**: Punteggio Lighthouse 100/100 (SEO, Best Practices, Performance).
-
-## 📂 Struttura del Progetto
-```bash
-portfolio/
-├── assets/          # Immagini e logo (logo.svg)
-├── css/
-│   └── style.css    # Stili globali, variabili e responsive design
-├── js/
-│   └── script.js    # Logica per scroll fluido e animazioni
-├── index.html       # Struttura principale
-└── README.md        # Documentazione
-```
-
-## 🚀 Come Eseguire in Locale
-
-### Prerequisiti
-Hai solo bisogno di un browser web moderno. Per un'esperienza di sviluppo migliore, puoi usare Node.js.
-
-### Installazione
-1. **Clona il repository**:
-   ```bash
-   git clone https://github.com/tuo-username/portfolio.git
-   cd portfolio
-   ```
-
-2. **Avvia il server locale** (Opzionale, se hai Node.js installato):
-   ```bash
-   npm start
-   ```
-   *Oppure apri semplicemente il file `index.html` nel tuo browser.*
-
-## 🌐 Deployment
-Il sito è ottimizzato per **GitHub Pages**.
-1. Vai su `Settings` > `Pages` nel tuo repository GitHub.
-2. Seleziona il branch `main` come source.
-3. Il sito sarà live in pochi secondi!
-
-## ✨ Features
-- **Responsive Design**: Perfetto su Mobile, Tablet e Desktop.
-- **Micro-Interazioni**: Animazioni fade-in allo scroll e hover effects.
-- **Sezioni**:
-  - **Hero**: Introduzione d'impatto.
-  - **Timeline**: Il mio percorso visivo.
-  - **Skills**: Competenze tecniche e soft.
-  - **Progetti**: Case studies strutturati (Metodo STAR).
-  - **Contatti**: Call to action chiare.
-
-## 📬 Contatti
-Sei interessato a collaborare o vuoi solo fare un saluto?
-
-- **LinkedIn**: [Tesfaye Venieri](https://linkedin.com/in/tesfaye-venieri)
-- **Email**: [tua-email@example.com](mailto:tua-email@example.com)
-- **GitHub**: [github.com/tuo-username](https://github.com/tuo-username)
+</div>
 
 ---
-*Designed & Built with ❤️ and Hope by Tesfaye Venieri.*
+
+## 🚀 Panoramica
+
+Questo progetto rappresenta la nuova identità digitale di **Tesfaye Venieri**, studente di **Informatica per il Management** presso l'Università di Bologna. Non è solo un portfolio, ma una vetrina tecnologica che incarna la fusione tra codice robusto e visione strategica.
+
+### ✨ Filosofia: "Cyber-Brutalist Premium"
+Il design adotta un’estetica **Modern Brutalist** arricchita da **Glassmorphism**, creando un'esperienza utente premium, tecnica e futuristica.
+
+---
+
+## 🎨 Design System
+
+### Palette Colori (Premium Contrast)
+- **Primary Orange**: `#FF5C00` (Energia & Innovazione)
+- **Accent Blue**: `#00D1FF` (Tecnologia & Chiarezza)
+- **Deep Slate**: `#0A0A0A` (Stabilità & Professionalità)
+- **Glass Effect**: Sfondi semitrasparenti con blur a 12px per una profondità moderna.
+
+### Tipografia
+- **Outfit**: Headings bold e impattanti per una gerarchia visiva chiara.
+- **Inter**: Body text ottimizzato per la massima leggibilità.
+- **Space Mono**: Dettagli tecnici e versioning per un feeling da developer.
+
+---
+
+## 🛠️ Stack Tecnologico
+
+### Frontend (Modern React)
+- **React 18** (Functional Components, Hooks)
+- **Vite 5** (Build tool ultra-veloce)
+- **React Bootstrap** (Layout grid responsive)
+- **AOS (Animate On Scroll)** (Layer di animazione dinamico)
+- **React Icons** (Set di icone scalabili)
+
+### Backend (Secure Express)
+- **Node.js & Express**
+- **Security First**: 
+    - **Helmet**: Sicurezza degli header HTTP.
+    - **Rate Limiting**: Protezione contro attacchi brute-force sul form contatti.
+    - **XSS & NoSQL Sanitization**: Protezione dei dati in ingresso.
+- **JSON Database**: Sistema di storage leggero e performante per i messaggi.
+
+---
+
+## 📁 Struttura del Progetto
+
+```bash
+portfolio/
+├── src/
+│   ├── components/       # Componenti React (Hero, Projects, Timeline...)
+│   ├── css/              # Design System modulare (@import base)
+│   │   ├── base/         # Reset, Variabili, Tipografia
+│   │   ├── layout/       # Navbar, Footer
+│   │   ├── components/   # Cards, Buttons
+│   │   └── pages/        # Stili specifici per sezione
+│   └── main.jsx          # Entry point React
+├── server/               # Microservizio Express (API & Messaggi)
+├── public/               # Asset statici (PDF, immagini, icone)
+└── index.html            # Entry point ottimizzato SEO
+```
+
+---
+
+## ⚙️ Installazione e Sviluppo
+
+### Prerequisiti
+- **Node.js v18+**
+
+### Setup Rapido
+1.  **Clona il repo**: `git clone [...]`
+2.  **Installa**: `npm install`
+3.  **Avvia Frontend**: `npm run dev` (Default: port 3000)
+4.  **Avvia Backend**: `node server/index.js` (Default: port 3001)
+
+### Comandi
+- `npm run build`: Genera la build di produzione in `/dist`.
+- `npm run lint`: Analisi del codice con ESLint (configurazione React 18).
+- `npm run format`: Formattazione automatica con Prettier.
+
+---
+
+## 📬 Contatti
+
+**Tesfaye Venieri**  
+*Coding the Future with Hope*
+
+- 📧 **Email:** [tesfaye.venieri@studio.unibo.it](mailto:tesfaye.venieri@studio.unibo.it)
+- 💼 **LinkedIn:** [linkedin.com/in/tesfaye-venieri](https://linkedin.com/in/tesfaye-venieri)
+- 💻 **GitHub:** [@tesfaye-venieri](https://github.com/tesfaye-venieri)
+
+---
+
+<div align="center">
+
+© 2025 Tesfaye Venieri.  
+**Designed with Precision. Built with Hope.**
+
+</div>

@@ -1,0 +1,24 @@
+/* ========================================
+   TESFAYE VENIERI - PORTFOLIO CSS MANIFEST
+   ======================================== */
+
+/* BASE */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* LAYOUT */
+@import 'layout/navbar.css';
+@import 'layout/footer.css';
+
+/* COMPONENTS */
+@import 'components/buttons.css';
+@import 'components/cards.css';
+
+/* PAGES / SECTIONS */
+@import 'pages/hero.css';
+@import 'pages/sections.css';
+@import 'pages/contact.css';
+
+/* MODULES & UTILITIES */
+@import 'modules/utilities.css';

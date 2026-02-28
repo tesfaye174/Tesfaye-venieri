@@ -1,0 +1,110 @@
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: var(--lh-tight);
+    letter-spacing: -0.03em;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: 700;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: var(--lh-base);
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-body);
+    font-weight: 400;
+    max-width: 65ch;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-base);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.highlight {
+    position: relative;
+    color: var(--text-primary);
+    z-index: 1;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 100%;
+    height: 0.3em;
+    background: var(--color-primary-glow);
+    z-index: -1;
+    transition: var(--transition-base);
+}
+
+.highlight:hover::after {
+    height: 0.8em;
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title::before {
+    content: '/// ' attr(data-label);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    text-align: left;
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}

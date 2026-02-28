@@ -1,0 +1,211 @@
+section {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.section-head {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-size: var(--fs-h2);
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    position: relative;
+}
+
+/* --- ABOUT: CLEAN TIMELINE --- */
+.timeline {
+    position: relative;
+    max-width: 900px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--glass-border), transparent);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-year {
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: var(--bg-main);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    letter-spacing: 0.05em;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 4.3rem;
+    top: 1rem;
+    width: 10px;
+    height: 10px;
+    background: var(--color-primary);
+    border: 2px solid var(--bg-main);
+    border-radius: 50%;
+    z-index: 2;
+    transition: var(--transition-base);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.4);
+    box-shadow: 0 0 12px var(--color-primary-glow);
+}
+
+.timeline-content {
+    background: var(--bg-soft);
+    padding: 2rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    position: relative;
+    transition: var(--transition-base);
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: rgba(255, 102, 0, 0.15);
+    transform: translateX(4px);
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.timeline-location {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-location::before {
+    content: '//';
+    color: var(--color-primary);
+    opacity: 0.5;
+}
+
+.timeline-role {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: var(--color-primary-glow);
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.timeline-icon-mobile {
+    display: none;
+}
+
+/* --- SKILLS: CLEAN BLOCKS --- */
+.skill-category {
+    background: var(--bg-soft);
+    padding: 2.25rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    height: 100%;
+    transition: var(--transition-base);
+}
+
+.skill-category:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 102, 0, 0.15);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-icon {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.skill-category h3 {
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.4rem 0.75rem;
+    background: var(--bg-main);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.skill-tag:hover {
+    background: var(--color-primary);
+    color: var(--text-on-dark);
+    border-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 3rem;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-dot {
+        left: 3px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .timeline-year {
+        display: none;
+    }
+
+    .skill-category {
+        padding: 1.75rem;
+    }
+}
