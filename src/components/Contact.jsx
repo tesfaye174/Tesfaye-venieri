@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Alert } from 'react-bootstrap';
-import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCaretRight } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaCaretRight } from 'react-icons/fa';
 
 const Contact = () => {
     const [formData, setFormData] = useState({

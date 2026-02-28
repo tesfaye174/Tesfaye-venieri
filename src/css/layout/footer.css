@@ -129,6 +129,27 @@
 }
 
 @media (max-width: 992px) {
+    .footer-column {
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-logo p {
+        max-width: 100%;
+    }
+
+    .footer-heading {
+        justify-content: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-social-grid {
+        justify-content: center;
+    }
+
     .footer-bottom-content {
         flex-direction: column;
         gap: 0.75rem;

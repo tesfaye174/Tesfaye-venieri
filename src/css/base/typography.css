@@ -108,3 +108,23 @@ a {
     padding-left: 1.5rem;
     line-height: 1.6;
 }
+
+/* --- MOBILE TYPOGRAPHY --- */
+@media (max-width: 768px) {
+    p {
+        max-width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+        align-items: center;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 3px solid var(--color-primary);
+        padding-bottom: 1rem;
+    }
+}

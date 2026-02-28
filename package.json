@@ -20,8 +20,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "prettier": "^3.1.0",
     "terser": "^5.26.0",
-    "vite": "^5.0.0",
-    "vite-plugin-html-inject": "^1.1.2"
+    "vite": "^5.0.0"
   },
   "keywords": [],
   "author": "Tesfaye Venieri",
@@ -30,7 +29,6 @@
     "aos": "^2.3.4",
     "body-parser": "^2.2.1",
     "bootstrap": "^5.3.8",
-    "classnames": "^2.5.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",

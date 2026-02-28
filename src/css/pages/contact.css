@@ -176,11 +176,42 @@
 }
 
 @media (max-width: 992px) {
+    .contact-info-side {
+        text-align: center;
+    }
+
+    .contact-subtitle {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .contact-form-side {
         padding: 2rem 1.5rem;
     }
 
     .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .contact-form-side {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-title br {
+        display: none;
     }
 }

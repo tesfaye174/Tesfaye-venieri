@@ -187,25 +187,63 @@ section {
 }
 
 @media (max-width: 768px) {
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .section-head {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .timeline {
+        max-width: 100%;
+    }
+
     .timeline-item {
-        padding-left: 3rem;
+        padding-left: 1.5rem;
     }
 
     .timeline::before {
-        left: 8px;
+        left: 2px;
     }
 
     .timeline-dot {
-        left: 3px;
-        width: 8px;
-        height: 8px;
+        display: none;
     }
 
     .timeline-year {
         display: none;
     }
 
+    .timeline-icon-mobile {
+        display: block;
+        font-size: 1.25rem;
+        color: var(--color-primary);
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .timeline-content p {
+        max-width: 100%;
+    }
+
+    .timeline-item:hover .timeline-content {
+        transform: none;
+    }
+
     .skill-category {
         padding: 1.75rem;
+        text-align: center;
+    }
+
+    .skill-tags {
+        justify-content: center;
+    }
+
+    .skill-icon {
+        margin-bottom: 1rem;
     }
 }
