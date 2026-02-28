@@ -1,113 +1,18 @@
-# Tesfaye Venieri - Premium Professional Portfolio
+# 💫 About Me:
+Hello! My name is Tesfaye Venieri, and I'm a Computer Science for Management student at the University of Bologna. I'm passionate about transforming innovative ideas into real-world projects and applications.<br>I'm currently seeking assistance with:<br><br>Developing and implementing my creative project concepts<br>Technical guidance for coding and software development<br>Project planning and management strategies<br>Turning abstract ideas into actionable development plans<br>Business and technical feasibility analysis<br><br>I'm particularly interested in projects that combine technology with practical management solutions. I'm looking for collaborative support to help bring my ideas from concept to completion.<br>Could you help me brainstorm, develop, or provide technical guidance for my upcoming projects?"
 
-<div align="center">
 
-**Coding the Future with Hope**
+## 🌐 Socials:
+[(https://instagram.com/lil.tes_/] [(https://www.linkedin.com/in/tesfaye-venieri-481b4a226/)] [(https://it.pinterest.com/lilhope01/)]
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen)](http://localhost:3000)
-[![Built with React](https://img.shields.io/badge/built%20with-React%2018-blue)](https://reactjs.org/)
-[![Vite Speed](https://img.shields.io/badge/powered%20by-Vite%205-purple)](https://vitejs.dev/)
-
-*Un portfolio professionale d'impatto che unisce lo sviluppo Full-Stack alla strategia di Management.*
-
-</div>
-
----
-
-## 🚀 Panoramica
-
-Questo progetto rappresenta la nuova identità digitale di **Tesfaye Venieri**, studente di **Informatica per il Management** presso l'Università di Bologna. Non è solo un portfolio, ma una vetrina tecnologica che incarna la fusione tra codice robusto e visione strategica.
-
-### ✨ Filosofia: "Cyber-Brutalist Premium"
-Il design adotta un’estetica **Modern Brutalist** arricchita da **Glassmorphism**, creando un'esperienza utente premium, tecnica e futuristica.
+# 💻 Tech Stack:
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Adobe](https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white) ![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![EA](https://img.shields.io/badge/ea-%23000000.svg?style=for-the-badge&logo=ea&logoColor=white) ![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=tesfaye174&theme=merko&hide_border=false&include_all_commits=false&count_private=false)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=tesfaye174&theme=merko&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=tesfaye174&theme=merko&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ---
+[![](https://visitcount.itsvg.in/api?id=tesfaye174&icon=0&color=0)](https://visitcount.itsvg.in)
 
-## 🎨 Design System
-
-### Palette Colori (Premium Contrast)
-- **Primary Orange**: `#FF5C00` (Energia & Innovazione)
-- **Accent Blue**: `#00D1FF` (Tecnologia & Chiarezza)
-- **Deep Slate**: `#0A0A0A` (Stabilità & Professionalità)
-- **Glass Effect**: Sfondi semitrasparenti con blur a 12px per una profondità moderna.
-
-### Tipografia
-- **Outfit**: Headings bold e impattanti per una gerarchia visiva chiara.
-- **Inter**: Body text ottimizzato per la massima leggibilità.
-- **Space Mono**: Dettagli tecnici e versioning per un feeling da developer.
-
----
-
-## 🛠️ Stack Tecnologico
-
-### Frontend (Modern React)
-- **React 18** (Functional Components, Hooks)
-- **Vite 5** (Build tool ultra-veloce)
-- **React Bootstrap** (Layout grid responsive)
-- **AOS (Animate On Scroll)** (Layer di animazione dinamico)
-- **React Icons** (Set di icone scalabili)
-
-### Backend (Secure Express)
-- **Node.js & Express**
-- **Security First**: 
-    - **Helmet**: Sicurezza degli header HTTP.
-    - **Rate Limiting**: Protezione contro attacchi brute-force sul form contatti.
-    - **XSS & NoSQL Sanitization**: Protezione dei dati in ingresso.
-- **JSON Database**: Sistema di storage leggero e performante per i messaggi.
-
----
-
-## 📁 Struttura del Progetto
-
-```bash
-portfolio/
-├── src/
-│   ├── components/       # Componenti React (Hero, Projects, Timeline...)
-│   ├── css/              # Design System modulare (@import base)
-│   │   ├── base/         # Reset, Variabili, Tipografia
-│   │   ├── layout/       # Navbar, Footer
-│   │   ├── components/   # Cards, Buttons
-│   │   └── pages/        # Stili specifici per sezione
-│   └── main.jsx          # Entry point React
-├── server/               # Microservizio Express (API & Messaggi)
-├── public/               # Asset statici (PDF, immagini, icone)
-└── index.html            # Entry point ottimizzato SEO
-```
-
----
-
-## ⚙️ Installazione e Sviluppo
-
-### Prerequisiti
-- **Node.js v18+**
-
-### Setup Rapido
-1.  **Clona il repo**: `git clone [...]`
-2.  **Installa**: `npm install`
-3.  **Avvia Frontend**: `npm run dev` (Default: port 3000)
-4.  **Avvia Backend**: `node server/index.js` (Default: port 3001)
-
-### Comandi
-- `npm run build`: Genera la build di produzione in `/dist`.
-- `npm run lint`: Analisi del codice con ESLint (configurazione React 18).
-- `npm run format`: Formattazione automatica con Prettier.
-
----
-
-## 📬 Contatti
-
-**Tesfaye Venieri**  
-*Coding the Future with Hope*
-
-- 📧 **Email:** [tesfaye.venieri@studio.unibo.it](mailto:tesfaye.venieri@studio.unibo.it)
-- 💼 **LinkedIn:** [linkedin.com/in/tesfaye-venieri](https://linkedin.com/in/tesfaye-venieri)
-- 💻 **GitHub:** [@tesfaye-venieri](https://github.com/tesfaye-venieri)
-
----
-
-<div align="center">
-
-© 2025 Tesfaye Venieri.  
-**Designed with Precision. Built with Hope.**
-
-</div>
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
