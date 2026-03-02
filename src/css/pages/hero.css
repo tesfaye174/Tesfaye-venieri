@@ -1,5 +1,5 @@
 /* ========================================
-   PAGE: HERO SECTION (MODERN CLEAN)
+   PAGE: HERO SECTION (PROFESSIONAL MINIMAL)
    ======================================== */
 .hero {
     min-height: 100vh;
@@ -7,7 +7,7 @@
     align-items: center;
     position: relative;
     padding: var(--spacing-xl) 0;
-    background: var(--bg-main);
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFB 100%);
     overflow: hidden;
 }
 
@@ -16,7 +16,8 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 70% 20%, var(--color-primary-glow), transparent 50%);
+        radial-gradient(ellipse at 70% 20%, var(--color-primary-glow), transparent 50%),
+        radial-gradient(ellipse at 10% 80%, var(--color-secondary-glow), transparent 50%);
     z-index: 0;
 }
 
@@ -30,16 +31,16 @@
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 0.5rem 1.1rem;
-    background: var(--bg-soft);
-    color: var(--color-primary);
+    padding: 0.6rem 1.25rem;
+    background: var(--color-secondary);
+    color: #FFFFFF;
     font-family: var(--font-mono);
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
     border-radius: var(--radius-full);
-    border: 1px solid var(--glass-border);
+    border: 1px solid var(--color-secondary-dark);
     font-weight: 700;
 }
 
@@ -64,6 +65,10 @@
     line-height: 0.95;
     letter-spacing: -0.04em;
     font-weight: 900;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .text-stroke {
@@ -110,9 +115,9 @@
 }
 
 .btn-hyper {
-    background: var(--color-primary);
+    background: var(--color-secondary);
     color: var(--text-on-dark);
-    padding: 0.9rem 2rem;
+    padding: 1rem 2.25rem;
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
@@ -123,19 +128,21 @@
     gap: 0.5rem;
     border-radius: var(--radius-sm);
     transition: var(--transition-base);
+    border: 2px solid var(--color-secondary);
 }
 
 .btn-hyper:hover {
-    background: var(--color-primary-light);
+    background: var(--color-secondary-dark);
+    border-color: var(--color-secondary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px var(--color-primary-glow);
+    box-shadow: 0 12px 28px rgba(0, 51, 102, 0.15);
 }
 
 .btn-hyper-outline {
-    border: 1px solid var(--glass-border-light);
-    color: var(--text-primary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
     background: transparent;
-    padding: 0.9rem 2rem;
+    padding: 0.95rem 2.15rem;
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
@@ -149,10 +156,11 @@
 }
 
 .btn-hyper-outline:hover {
-    background: var(--text-primary);
+    background: var(--color-secondary);
     color: var(--bg-main);
-    border-color: var(--text-primary);
+    border-color: var(--color-secondary);
     transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 51, 102, 0.15);
 }
 
 /* --- SOCIAL STRIP --- */
@@ -169,7 +177,7 @@
 }
 
 .hero-social-strip a:hover {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     transform: translateY(-3px);
 }
 

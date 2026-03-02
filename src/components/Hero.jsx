@@ -15,13 +15,12 @@ const Hero = () => {
                             </div>
 
                             <h1 className="hero-title" data-aos="fade-up">
-                                <span className="text-stroke">Tesfaye</span> <br />
-                                <span className="text-gradient">Venieri</span>
+                                Tesfaye Venieri
                             </h1>
 
                             <div className="hero-tagline-wrap" data-aos="fade-up" data-aos-delay="100">
                                 <p className="hero-subtitle">Studente di Informatica per il Management @ UniBo</p>
-                                <div className="hero-main-tagline text-gradient">Coding the Future with Hope</div>
+                                <div className="hero-main-tagline">Coding the Future with Hope</div>
                             </div>
 
                             <p className="hero-description" data-aos="fade-up" data-aos-delay="200">

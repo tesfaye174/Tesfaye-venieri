@@ -1,6 +1,7 @@
 section {
     padding: var(--spacing-xl) 0;
     position: relative;
+    background: #FFFFFF;
 }
 
 .section-head {
@@ -14,6 +15,17 @@ section {
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::before {
+    content: '';
+    width: 4px;
+    height: 2.5rem;
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+    border-radius: 2px;
 }
 
 /* --- ABOUT: CLEAN TIMELINE --- */
@@ -28,8 +40,8 @@ section {
     left: 20px;
     top: 10px;
     bottom: 10px;
-    width: 1px;
-    background: linear-gradient(to bottom, var(--color-primary), var(--glass-border), transparent);
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary), transparent);
 }
 
 .timeline-item {
@@ -49,11 +61,11 @@ section {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     font-weight: 700;
-    color: var(--color-primary);
-    background: var(--bg-main);
-    padding: 0.3rem 0.6rem;
+    color: var(--text-on-dark);
+    background: var(--color-secondary);
+    padding: 0.4rem 0.7rem;
     border-radius: var(--radius-sm);
-    border: 1px solid var(--glass-border);
+    border: 1px solid var(--color-secondary-dark);
     letter-spacing: 0.05em;
 }
 
@@ -61,32 +73,34 @@ section {
     position: absolute;
     left: 4.3rem;
     top: 1rem;
-    width: 10px;
-    height: 10px;
-    background: var(--color-primary);
-    border: 2px solid var(--bg-main);
+    width: 12px;
+    height: 12px;
+    background: var(--color-secondary);
+    border: 3px solid var(--bg-main);
     border-radius: 50%;
     z-index: 2;
     transition: var(--transition-base);
+    box-shadow: 0 0 0 2px var(--color-secondary);
 }
 
 .timeline-item:hover .timeline-dot {
-    transform: scale(1.4);
-    box-shadow: 0 0 12px var(--color-primary-glow);
+    transform: scale(1.5);
+    box-shadow: 0 0 0 2px var(--bg-main), 0 0 16px var(--color-secondary-glow);
 }
 
 .timeline-content {
     background: var(--bg-soft);
     padding: 2rem;
-    border: 1px solid var(--glass-border);
+    border: 2px solid var(--color-secondary);
     border-radius: var(--radius-md);
     position: relative;
     transition: var(--transition-base);
 }
 
 .timeline-item:hover .timeline-content {
-    border-color: rgba(255, 102, 0, 0.15);
-    transform: translateX(4px);
+    border-color: var(--color-secondary-light);
+    transform: translateX(6px);
+    box-shadow: 0 8px 24px rgba(0, 51, 102, 0.1);
 }
 
 .timeline-content h3 {
@@ -119,9 +133,9 @@ section {
     font-family: var(--font-mono);
     font-size: 0.65rem;
     font-weight: 700;
-    color: var(--color-primary);
-    background: var(--color-primary-glow);
-    padding: 0.35rem 0.9rem;
+    color: var(--text-on-dark);
+    background: var(--color-secondary);
+    padding: 0.4rem 1rem;
     border-radius: var(--radius-full);
     margin-bottom: 1rem;
     text-transform: uppercase;
@@ -134,25 +148,25 @@ section {
 
 /* --- SKILLS: CLEAN BLOCKS --- */
 .skill-category {
-    background: var(--bg-soft);
+    background: linear-gradient(135deg, var(--bg-soft) 0%, var(--bg-navy-soft) 100%);
     padding: 2.25rem;
-    border: 1px solid var(--glass-border);
+    border: 2px solid var(--color-secondary);
     border-radius: var(--radius-md);
     height: 100%;
     transition: var(--transition-base);
 }
 
 .skill-category:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 102, 0, 0.15);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+    border-color: var(--color-secondary-light);
+    box-shadow: 0 12px 32px rgba(0, 51, 102, 0.12);
 }
 
 .skill-icon {
-    font-size: 1.75rem;
-    color: var(--color-primary);
+    font-size: 2rem;
+    color: var(--color-secondary);
     margin-bottom: 1.5rem;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .skill-category h3 {
@@ -181,9 +195,9 @@ section {
 }
 
 .skill-tag:hover {
-    background: var(--color-primary);
+    background: var(--color-secondary);
     color: var(--text-on-dark);
-    border-color: var(--color-primary);
+    border-color: var(--color-secondary);
 }
 
 @media (max-width: 768px) {

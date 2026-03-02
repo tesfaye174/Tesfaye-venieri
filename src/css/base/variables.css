@@ -1,30 +1,38 @@
 :root {
-    /* --- COLOR PALETTE: MODERN MINIMAL LIGHT --- */
+    /* --- COLOR PALETTE: PROFESSIONAL MINIMAL --- */
+    /* Primary: Orange (Energy & Warmth) */
     --color-primary: #FF6600;
     --color-primary-dark: #e05a00;
     --color-primary-light: #ff8533;
     --color-primary-glow: rgba(255, 102, 0, 0.08);
 
-    --color-secondary: #FF6600;
+    /* Secondary: Navy (Trust & Professionalism) */
+    --color-secondary: #003366;
+    --color-secondary-dark: #002147;
+    --color-secondary-light: #0d5c99;
+    --color-secondary-glow: rgba(0, 51, 102, 0.08);
+
     --color-accent: #FF6600;
     --color-accent-glow: rgba(255, 102, 0, 0.06);
 
     /* Neutral Palette */
     --bg-main: #FFFFFF;
-    --bg-soft: #F5F5F5;
-    --bg-card: rgba(245, 245, 245, 0.9);
-    --bg-grid: rgba(0, 0, 0, 0.03);
+    --bg-soft: #F8FAFB;
+    --bg-card: rgba(248, 250, 251, 0.9);
+    --bg-grid: rgba(0, 51, 102, 0.02);
+    --bg-navy-soft: rgba(0, 51, 102, 0.04);
 
-    --text-primary: #1a1a1a;
+    --text-primary: #003366;
     --text-secondary: #555555;
     --text-muted: #999999;
     --text-on-dark: #FFFFFF;
 
-    /* --- GLASS --- */
+    /* --- GLASS & BORDERS --- */
     --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-bg-dark: rgba(255, 255, 255, 0.95);
-    --glass-border: rgba(0, 0, 0, 0.08);
-    --glass-border-light: rgba(0, 0, 0, 0.12);
+    --glass-border: rgba(0, 51, 102, 0.1);
+    --glass-border-light: rgba(0, 51, 102, 0.15);
+    --glass-border-navy: rgba(0, 51, 102, 0.12);
     --glass-blur: blur(20px);
 
     /* --- TYPOGRAPHY --- */

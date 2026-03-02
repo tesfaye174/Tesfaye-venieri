@@ -48,7 +48,7 @@ const Contact = () => {
                         <div className="contact-info-side">
                             <h2 className="contact-title" data-label="CONNECT">
                                 Parliamo del Tuo <br />
-                                <span className="text-gradient">Prossimo Progetto</span>.
+                                Prossimo Progetto.
                             </h2>
                             <p className="contact-subtitle">
                                 Sempre aperto a nuove sfide e collaborazioni nel mondo tech e manageriale.
