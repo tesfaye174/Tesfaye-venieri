@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const PORT = env.PORT || 3001;
 
     return {
-        base: './',
+        base: '/',
         plugins: [react()],
         build: {
             outDir: 'dist',

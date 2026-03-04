@@ -153,6 +153,14 @@
     transition: var(--transition-fast);
 }
 
+.project-card-mini:hover .project-title-mini {
+    color: var(--color-secondary);
+}
+
+.project-card-mini:hover .project-meta-mini {
+    color: var(--color-primary);
+}
+
 .project-card-mini:hover .tech-pill-mini {
     color: var(--color-secondary);
     border-color: var(--color-secondary-light);

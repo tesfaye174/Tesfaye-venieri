@@ -10,7 +10,7 @@ const Projects = () => {
             tags: ["MySQL", "PHP", "MongoDB"],
             meta: "BASI_DI_DATI // XAMPP",
             link: "#",
-            github: "https://github.com/tesfaye174/BOSTARTER",
+            github: "https://github.com/tesfaye174/ESG-Balance",
             imageClass: "project-gradient-1"
         },
         {
@@ -50,7 +50,7 @@ const Projects = () => {
             tags: ["React", "Vite", "Bootstrap"],
             meta: "SELF // LIVE",
             link: "#home",
-            github: "https://github.com/tesfaye174",
+            github: "https://github.com/tesfaye174/Tesfaye-venieri",
             imageClass: "project-gradient-2"
         },
         {
