@@ -48,7 +48,7 @@ const Hero = () => {
                     <Col lg={5} data-aos="zoom-out" data-aos-delay="200">
                         <div className="hero-visual-side">
                             <div className="hero-visual-container">
-                                <img src="assets/img/hero_tech_light_abstract.png" alt="Tech Abstract" className="hero-main-visual" />
+                                <img src="assets/img/img1.png" alt="Tech Abstract" className="hero-main-visual" loading="eager" />
                                 <div className="visual-glitch-border"></div>
                                 <div className="visual-float-marker marker-1">001_DEV</div>
                                 <div className="visual-float-marker marker-2">002_MNG</div>

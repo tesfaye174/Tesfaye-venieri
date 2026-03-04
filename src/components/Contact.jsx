@@ -109,8 +109,9 @@ const Contact = () => {
                                         required
                                         value={formData.message}
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                        onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}
                                         placeholder="Come posso aiutarti?"
-                                        style={{ overflow: 'hidden' }}
+                                        style={{ overflow: 'hidden', resize: 'none' }}
                                     />
                                     <div className="input-focus-line"></div>
                                 </div>
