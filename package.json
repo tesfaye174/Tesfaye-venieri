@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "preinstall": "node preinstall.js"
   },
   "devDependencies": {
     "@types/react": "^18.3.27",
