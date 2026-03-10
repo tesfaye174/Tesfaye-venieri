@@ -46,7 +46,7 @@ const Contact = () => {
                 <Row className="gy-5 align-items-center">
                     <Col lg={5} data-aos="fade-right">
                         <div className="contact-info-side">
-                            <h2 className="contact-title" data-label="CONNECT">
+                            <h2 className="contact-title">
                                 Parliamo del Tuo <br />
                                 Prossimo Progetto.
                             </h2>

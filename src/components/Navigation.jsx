@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
-
 const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
     const [expanded, setExpanded] = useState(false);
