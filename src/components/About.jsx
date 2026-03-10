@@ -9,7 +9,7 @@ const About = () => {
             title: "Il Presente",
             role: "Full-Stack Developer & Strategist",
             location: "Bologna, Italia",
-            description: "6 progetti universitari attivi, un portfolio che racconta chi sono e una visione chiara: unire tecnologia e management per costruire qualcosa che conta. Il mio nome significa Hope — e questa e la promessa.",
+            description: "9 progetti attivi, un portfolio che racconta chi sono e una visione chiara: unire tecnologia e management per costruire qualcosa che conta. Il mio nome significa Hope — e questa è la promessa.",
             icon: <FaBriefcase />
         },
         {
@@ -25,7 +25,7 @@ const About = () => {
             title: "L'Origine",
             role: "Da Addis Abeba al Mondo",
             location: "Addis Abeba, Etiopia",
-            description: "Nato ad Addis Abeba, cresciuto tra due culture. Il viaggio dall'Etiopia all'Italia mi ha insegnato l'adattabilita, la resilienza e il valore di ogni opportunita. Tesfaye significa Speranza — e porto questo significato in tutto cio che faccio.",
+            description: "Nato ad Addis Abeba, cresciuto tra due culture. Il viaggio dall'Etiopia all'Italia mi ha insegnato l'adattabilità, la resilienza e il valore di ogni opportunità. Tesfaye significa Speranza — e porto questo significato in tutto ciò che faccio.",
             icon: <FaGraduationCap />
         }
     ];

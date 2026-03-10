@@ -42,11 +42,16 @@
 .logo-icon-box {
     background: var(--color-secondary);
     color: var(--text-on-dark);
-    padding: 0.5rem 0.65rem;
+    padding: 0.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.95rem;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .logo-text-box {

@@ -25,14 +25,14 @@ const Hero = () => {
 
                             <p className="hero-description" data-aos="fade-up" data-aos-delay="200">
                                 Da Addis Abeba a Bologna: unisco il rigore del codice alla visione strategica del management.
-                                6 progetti universitari reali, dalla progettazione database al mobile Android.
+                                9 progetti reali, dalla progettazione database al mobile Android.
                             </p>
 
                             <div className="hero-actions" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#projects" className="btn-hyper">
                                     <span>Vedi i Progetti</span> <FaCaretRight />
                                 </a>
-                                <a href="assets/docs/cv-tesfaye-venieri.pdf" target="_blank" rel="noopener noreferrer" className="btn-hyper-outline">
+                                <a href="/assets/docs/cv-tesfaye-venieri.pdf" target="_blank" rel="noopener noreferrer" className="btn-hyper-outline">
                                     <FaDownload /> CV.PDF
                                 </a>
                             </div>
@@ -48,7 +48,7 @@ const Hero = () => {
                     <Col lg={5} data-aos="zoom-out" data-aos-delay="200">
                         <div className="hero-visual-side">
                             <div className="hero-visual-container">
-                                <img src="assets/img/img1.png" alt="Tech Abstract" className="hero-main-visual" loading="eager" />
+                                <img src="/assets/img/img1.png" alt="Tech Abstract" className="hero-main-visual" loading="eager" />
                                 <div className="visual-glitch-border"></div>
                                 <div className="visual-float-marker marker-1">001_DEV</div>
                                 <div className="visual-float-marker marker-2">002_MNG</div>

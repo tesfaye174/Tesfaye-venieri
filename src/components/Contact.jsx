@@ -78,7 +78,7 @@ const Contact = () => {
                             )}
 
                             <Form onSubmit={handleSubmit} className="contact-form">
-                                <div className="input-group">
+                                <div className="form-field">
                                     <label>Nome e Cognome</label>
                                     <input
                                         type="text"
@@ -90,7 +90,7 @@ const Contact = () => {
                                     <div className="input-focus-line"></div>
                                 </div>
 
-                                <div className="input-group">
+                                <div className="form-field">
                                     <label>Email Istituzionale / Lavorativa</label>
                                     <input
                                         type="email"
@@ -102,7 +102,7 @@ const Contact = () => {
                                     <div className="input-focus-line"></div>
                                 </div>
 
-                                <div className="input-group">
+                                <div className="form-field">
                                     <label>Il Tuo Messaggio</label>
                                     <textarea
                                         rows="1"

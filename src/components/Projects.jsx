@@ -16,7 +16,7 @@ const Projects = () => {
         {
             id: "02",
             title: "Travel Companion",
-            description: "App Android per gestione viaggi: tracciamento GPS in tempo reale, galleria foto con CameraX, geofencing per notifiche di prossimita e statistiche di viaggio avanzate.",
+            description: "App Android per gestione viaggi: tracciamento GPS in tempo reale, galleria foto con CameraX, geofencing per notifiche di prossimità e statistiche di viaggio avanzate.",
             tags: ["Kotlin", "Android Jetpack", "Google Maps"],
             meta: "LAM_PROJECT // MOBILE",
             link: "#",
@@ -30,7 +30,7 @@ const Projects = () => {
             tags: ["Java", "Socket TCP", "Multithreading"],
             meta: "LAB_SO // SERVER",
             link: "#",
-            github: "https://github.com/tesfaye174?tab=repositories",
+            github: "https://github.com/tesfaye174",
             imageClass: "project-gradient-3"
         },
         {
@@ -56,11 +56,41 @@ const Projects = () => {
         {
             id: "06",
             title: "Java OOP Collection",
-            description: "21 esercizi Java progressivi: da calcolatrice e numeri primi fino a gestione studenti, sistema libreria e smartphone manager con ereditarieta e polimorfismo.",
+            description: "21 esercizi Java progressivi: da calcolatrice e numeri primi fino a gestione studenti, sistema libreria e smartphone manager con ereditarietà e polimorfismo.",
             tags: ["Java", "OOP", "Algorithms"],
             meta: "PROG_INTERNET // 21_EX",
             link: "#",
             github: "https://github.com/tesfaye174/Algoritmi",
+            imageClass: "project-gradient-3"
+        },
+        {
+            id: "07",
+            title: "Gymbro",
+            description: "Web app per il fitness e tracking allenamenti: gestione schede personalizzate, monitoraggio progressi, statistiche workout e interfaccia moderna in TypeScript.",
+            tags: ["TypeScript", "Next.js", "Fitness"],
+            meta: "PERSONAL // WEB_APP",
+            link: "#",
+            github: "https://github.com/tesfaye174/Gymbro",
+            imageClass: "project-gradient-1"
+        },
+        {
+            id: "08",
+            title: "BOSTARTER",
+            description: "Piattaforma di crowdfunding ispirata a Kickstarter: gestione campagne, sistema di finanziamento, dashboard utenti e pannello amministrativo con PHP e MySQL.",
+            tags: ["PHP", "MySQL", "Web"],
+            meta: "BASI_DI_DATI // WEB",
+            link: "#",
+            github: "https://github.com/tesfaye174/BOSTARTER",
+            imageClass: "project-gradient-2"
+        },
+        {
+            id: "09",
+            title: "Dress",
+            description: "App Android per la gestione del guardaroba digitale: catalogazione outfit, suggerimenti abbinamenti, organizzazione capi per categoria e stagione in Kotlin.",
+            tags: ["Kotlin", "Android", "Mobile"],
+            meta: "LAM_PROJECT // MOBILE",
+            link: "#",
+            github: "https://github.com/tesfaye174/dress",
             imageClass: "project-gradient-3"
         }
     ];

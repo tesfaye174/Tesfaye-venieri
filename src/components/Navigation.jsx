@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { FaTerminal } from 'react-icons/fa';
+
 
 const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -41,7 +41,7 @@ const Navigation = () => {
             <Container className="nav-container">
                 <Navbar.Brand href="#home" className="logo" aria-label="Tesfaye Venieri Home">
                     <div className="logo-icon-box">
-                        <FaTerminal />
+                        <img src="/assets/img/logo.png" alt="Logo" className="logo-img" />
                     </div>
                     <div className="logo-text-box">
                         Tesfaye

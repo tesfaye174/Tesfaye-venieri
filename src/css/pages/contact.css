@@ -97,14 +97,14 @@
     flex-direction: column;
 }
 
-.input-group {
+.form-field {
     margin-bottom: 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.input-group label {
+.form-field label {
     display: block;
     font-family: var(--font-mono);
     font-size: 0.65rem;
@@ -115,8 +115,8 @@
     letter-spacing: 0.08em;
 }
 
-.input-group input,
-.input-group textarea {
+.form-field input,
+.form-field textarea {
     width: 100%;
     background: transparent;
     border: none;
@@ -129,8 +129,8 @@
     transition: var(--transition-base);
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
+.form-field input:focus,
+.form-field textarea:focus {
     outline: none;
     border-bottom-color: var(--color-secondary);
 }
@@ -145,8 +145,8 @@
     transition: var(--transition-base);
 }
 
-.input-group input:focus~.input-focus-line,
-.input-group textarea:focus~.input-focus-line {
+.form-field input:focus~.input-focus-line,
+.form-field textarea:focus~.input-focus-line {
     width: 100%;
 }
 

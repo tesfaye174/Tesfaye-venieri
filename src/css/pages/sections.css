@@ -9,26 +9,6 @@ section {
     margin-bottom: var(--spacing-lg);
 }
 
-.section-title {
-    font-size: var(--fs-h2);
-    font-weight: 900;
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.03em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.section-title::before {
-    content: '';
-    width: 4px;
-    height: 2.5rem;
-    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
-    border-radius: 2px;
-}
-
 /* --- ABOUT: CLEAN TIMELINE --- */
 .timeline {
     position: relative;
