@@ -1,15 +1,58 @@
 section {
     padding: var(--spacing-xl) 0;
     position: relative;
-    background: #FFFFFF;
+    background: var(--bg-main);
     scroll-margin-top: 80px;
+}
+
+section:nth-child(even) {
+    background: var(--bg-soft);
+}
+
+/* Section divider rule */
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 168, 75, 0.15), transparent);
 }
 
 .section-head {
     margin-bottom: var(--spacing-lg);
+    position: relative;
+    overflow: visible;
 }
 
-/* --- ABOUT: CLEAN TIMELINE --- */
+/* Large faint section number watermarks */
+.about .section-head::after      { content: '01'; }
+.skills .section-head::after     { content: '02'; }
+.projects .section-head::after   { content: '03'; }
+.contact .section-head::after    { content: '04'; }
+
+.about .section-head::after,
+.skills .section-head::after,
+.projects .section-head::after,
+.contact .section-head::after {
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 11vw, 9rem);
+    font-weight: 700;
+    color: rgba(212, 168, 75, 0.038);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.06em;
+    z-index: 0;
+}
+
+/* ============================================
+   ABOUT — DARK TIMELINE
+   ============================================ */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -21,8 +64,9 @@ section {
     left: 20px;
     top: 10px;
     bottom: 10px;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary), transparent);
+    width: 1px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary), transparent);
+    opacity: 0.4;
 }
 
 .timeline-item {
@@ -40,64 +84,67 @@ section {
     left: 0;
     top: 0.4rem;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--text-on-dark);
-    background: var(--color-secondary);
-    padding: 0.4rem 0.7rem;
+    font-size: 0.62rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: var(--bg-card);
+    padding: 0.35rem 0.65rem;
     border-radius: var(--radius-sm);
-    border: 1px solid var(--color-secondary-dark);
-    letter-spacing: 0.05em;
+    border: 1px solid var(--glass-border);
+    letter-spacing: 0.06em;
 }
 
 .timeline-dot {
     position: absolute;
     left: 4.3rem;
     top: 1rem;
-    width: 12px;
-    height: 12px;
-    background: var(--color-secondary);
-    border: 3px solid var(--bg-main);
+    width: 10px;
+    height: 10px;
+    background: var(--color-primary);
+    border: 2px solid var(--bg-main);
     border-radius: 50%;
     z-index: 2;
     transition: var(--transition-base);
-    box-shadow: 0 0 0 2px var(--color-secondary);
+    box-shadow: 0 0 0 1px rgba(212, 168, 75, 0.3);
 }
 
 .timeline-item:hover .timeline-dot {
-    transform: scale(1.5);
-    box-shadow: 0 0 0 2px var(--bg-main), 0 0 16px var(--color-secondary-glow);
+    transform: scale(1.6);
+    box-shadow: 0 0 0 2px var(--bg-main), 0 0 20px rgba(212, 168, 75, 0.4);
 }
 
 .timeline-content {
-    background: var(--bg-soft);
+    background: var(--bg-card);
     padding: 2rem;
-    border: 2px solid var(--color-secondary);
+    border: 1px solid var(--glass-border);
+    border-left: 2px solid rgba(212, 168, 75, 0.25);
     border-radius: var(--radius-md);
     position: relative;
     transition: var(--transition-base);
 }
 
 .timeline-item:hover .timeline-content {
-    border-color: var(--color-secondary-light);
+    border-left-color: var(--color-primary);
     transform: translateX(6px);
-    box-shadow: 0 8px 24px rgba(0, 51, 102, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), -4px 0 20px rgba(212, 168, 75, 0.08);
 }
 
 .timeline-content h3 {
-    font-size: 1.3rem;
-    font-weight: 800;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    letter-spacing: 0.04em;
 }
 
 .timeline-location {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     color: var(--text-muted);
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -112,49 +159,76 @@ section {
 .timeline-role {
     display: inline-block;
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--text-on-dark);
-    background: var(--color-secondary);
-    padding: 0.4rem 1rem;
-    border-radius: var(--radius-full);
+    font-size: 0.62rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: rgba(212, 168, 75, 0.08);
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(212, 168, 75, 0.2);
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .timeline-icon-mobile {
     display: none;
 }
 
-/* --- SKILLS: CLEAN BLOCKS --- */
+/* ============================================
+   SKILLS — DARK CARDS
+   ============================================ */
 .skill-category {
-    background: linear-gradient(135deg, var(--bg-soft) 0%, var(--bg-navy-soft) 100%);
+    background: var(--bg-card);
     padding: 2.25rem;
-    border: 2px solid var(--color-secondary);
+    padding-top: 2.5rem;
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid rgba(212, 168, 75, 0.12);
     border-radius: var(--radius-md);
     height: 100%;
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    opacity: 0;
     transition: var(--transition-base);
 }
 
 .skill-category:hover {
-    transform: translateY(-6px);
-    border-color: var(--color-secondary-light);
-    box-shadow: 0 12px 32px rgba(0, 51, 102, 0.12);
+    transform: translateY(-5px);
+    border-top-color: var(--color-primary);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 168, 75, 0.06);
 }
 
-.skill-icon {
-    font-size: 2rem;
-    color: var(--color-secondary);
-    margin-bottom: 1.5rem;
+.skill-category:hover::before {
     opacity: 1;
 }
 
+.skill-icon {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
 .skill-category h3 {
-    font-weight: 800;
+    font-family: var(--font-heading);
+    font-weight: 700;
     margin-bottom: 1.25rem;
-    font-size: 1.1rem;
-    letter-spacing: -0.01em;
+    font-size: 1.15rem;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
 }
 
 .skill-tags {
@@ -165,22 +239,105 @@ section {
 
 .skill-tag {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 600;
-    padding: 0.4rem 0.75rem;
-    background: var(--bg-main);
-    color: var(--text-secondary);
+    font-size: 0.62rem;
+    font-weight: 400;
+    padding: 0.35rem 0.7rem;
+    background: rgba(212, 168, 75, 0.04);
+    color: var(--text-muted);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-sm);
     transition: var(--transition-fast);
+    letter-spacing: 0.04em;
 }
 
 .skill-tag:hover {
-    background: var(--color-secondary);
-    color: var(--text-on-dark);
-    border-color: var(--color-secondary);
+    background: rgba(212, 168, 75, 0.12);
+    color: var(--color-primary);
+    border-color: rgba(212, 168, 75, 0.3);
 }
 
+/* ============================================
+   ABOUT STATS — 3 HIGHLIGHT CARDS
+   ============================================ */
+.about-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 130px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-top: 2px solid rgba(212, 168, 75, 0.3);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.stat-card:hover {
+    border-top-color: var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 24px rgba(212, 168, 75, 0.06);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Skill ID watermark */
+.skill-id {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(212, 168, 75, 0.06);
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     section {
         padding: var(--spacing-lg) 0;
@@ -212,9 +369,10 @@ section {
 
     .timeline-icon-mobile {
         display: block;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: var(--color-primary);
         margin-bottom: 0.75rem;
+        opacity: 0.7;
     }
 
     .timeline-content {
@@ -240,5 +398,13 @@ section {
 
     .skill-icon {
         margin-bottom: 1rem;
+    }
+
+    .about-stats {
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
     }
 }

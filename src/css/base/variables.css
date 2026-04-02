@@ -1,75 +1,126 @@
 :root {
-    /* --- COLOR PALETTE: PROFESSIONAL MINIMAL --- */
-    /* Primary: Orange (Energy & Warmth) */
-    --color-primary: #FF6600;
-    --color-primary-dark: #e05a00;
-    --color-primary-light: #ff8533;
-    --color-primary-glow: rgba(255, 102, 0, 0.08);
+    /* ============================================
+       COLOR PALETTE: DARK LUXURY — ADDIS TO BOLOGNA
+       Ethiopian amber gold on warm midnight
+       ============================================ */
 
-    /* Secondary: Navy (Trust & Professionalism) */
-    --color-secondary: #003366;
-    --color-secondary-dark: #002147;
-    --color-secondary-light: #0d5c99;
-    --color-secondary-glow: rgba(0, 51, 102, 0.08);
+    /* Primary: Ethiopian Amber Gold */
+    --color-primary: #D4A84B;
+    --color-primary-dark: #B8902A;
+    --color-primary-light: #E8BF6A;
+    --color-primary-glow: rgba(212, 168, 75, 0.12);
 
-    --color-accent: #FF6600;
-    --color-accent-glow: rgba(255, 102, 0, 0.06);
+    /* Secondary: Terracotta */
+    --color-secondary: #C4603C;
+    --color-secondary-dark: #A24E2E;
+    --color-secondary-light: #E07252;
+    --color-secondary-glow: rgba(196, 96, 60, 0.1);
 
-    /* Neutral Palette */
-    --bg-main: #FFFFFF;
-    --bg-soft: #F8FAFB;
-    --bg-card: rgba(248, 250, 251, 0.9);
-    --bg-grid: rgba(0, 51, 102, 0.02);
-    --bg-navy-soft: rgba(0, 51, 102, 0.04);
+    --color-accent: #D4A84B;
+    --color-accent-glow: rgba(212, 168, 75, 0.08);
 
-    --text-primary: #003366;
-    --text-secondary: #555555;
-    --text-muted: #999999;
-    --text-on-dark: #FFFFFF;
+    /* Neutral Palette — Warm Dark */
+    --bg-main: #0C0B09;
+    --bg-soft: #151310;
+    --bg-card: #1C1916;
+    --bg-grid: rgba(212, 168, 75, 0.025);
+    --bg-navy-soft: rgba(212, 168, 75, 0.04);
 
-    /* --- GLASS & BORDERS --- */
-    --glass-bg: rgba(255, 255, 255, 0.85);
-    --glass-bg-dark: rgba(255, 255, 255, 0.95);
-    --glass-border: rgba(0, 51, 102, 0.1);
-    --glass-border-light: rgba(0, 51, 102, 0.15);
-    --glass-border-navy: rgba(0, 51, 102, 0.12);
+    --text-primary: #F5EFE4;
+    --text-secondary: #A89F96;
+    --text-muted: #5E574F;
+    --text-on-dark: #0C0B09;
+
+    /* Glass & Borders */
+    --glass-bg: rgba(21, 19, 16, 0.88);
+    --glass-bg-dark: rgba(12, 11, 9, 0.96);
+    --glass-border: rgba(212, 168, 75, 0.1);
+    --glass-border-light: rgba(212, 168, 75, 0.22);
+    --glass-border-navy: rgba(212, 168, 75, 0.08);
     --glass-blur: blur(20px);
 
-    /* --- TYPOGRAPHY --- */
-    --font-heading: 'Outfit', 'Poppins', sans-serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-mono: 'Space Mono', 'Fira Code', monospace;
+    /* Typography */
+    --font-display: 'Cormorant Garamond', 'Georgia', serif;
+    --font-heading: 'Barlow Condensed', 'Impact', sans-serif;
+    --font-body: 'Jost', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Fira Code', 'Courier New', monospace;
 
-    --fs-h1: clamp(3rem, 8vw, 7rem);
-    --fs-h2: clamp(1.85rem, 4vw, 2.75rem);
-    --fs-h3: clamp(1.25rem, 2.5vw, 1.6rem);
+    --fs-h1: clamp(4.5rem, 14vw, 11rem);
+    --fs-h2: clamp(2.25rem, 5vw, 3.75rem);
+    --fs-h3: clamp(1.3rem, 2.5vw, 1.65rem);
     --fs-body: 1rem;
     --fs-small: 0.875rem;
 
-    --lh-tight: 1.08;
-    --lh-base: 1.65;
+    --lh-tight: 0.92;
+    --lh-base: 1.72;
 
-    /* --- SPACING & LAYOUT --- */
+    /* Spacing & Layout */
     --container-width: 1200px;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
-    --spacing-lg: 4.5rem;
-    --spacing-xl: 7rem;
+    --spacing-lg: 5rem;
+    --spacing-xl: 8rem;
 
-    /* --- DESIGN SYSTEM --- */
+    /* Design System */
     --radius-none: 0px;
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
+    --radius-sm: 3px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
     --radius-full: 9999px;
 
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
-    --shadow-brutal: 12px 12px 0px 0px var(--color-primary);
+    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.7);
+    --shadow-glow: 0 0 40px rgba(212, 168, 75, 0.12);
+    --shadow-brutal: 5px 5px 0px 0px var(--color-primary);
 
-    --transition-fast: 0.15s ease;
-    --transition-base: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+    --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   LIGHT MODE — WARM EDITORIAL PARCHMENT
+   Inverted warmth: espresso on cream
+   ============================================ */
+[data-theme="light"] {
+    --color-primary: #B8741A;
+    --color-primary-dark: #9A5E10;
+    --color-primary-light: #D4902A;
+    --color-primary-glow: rgba(184, 116, 26, 0.14);
+
+    --color-secondary: #A04535;
+    --color-secondary-dark: #823326;
+    --color-secondary-light: #C45545;
+    --color-secondary-glow: rgba(160, 69, 53, 0.1);
+
+    --color-accent: #B8741A;
+    --color-accent-glow: rgba(184, 116, 26, 0.08);
+
+    --bg-main: #FAF7F2;
+    --bg-soft: #F1EBE1;
+    --bg-card: #FFFFFF;
+    --bg-grid: rgba(184, 116, 26, 0.03);
+    --bg-navy-soft: rgba(184, 116, 26, 0.05);
+
+    --text-primary: #1C1714;
+    --text-secondary: #4A3F37;
+    --text-muted: #9B8E85;
+    --text-on-dark: #FAF7F2;
+
+    --glass-bg: rgba(241, 235, 225, 0.92);
+    --glass-bg-dark: rgba(250, 247, 242, 0.97);
+    --glass-border: rgba(28, 23, 20, 0.09);
+    --glass-border-light: rgba(28, 23, 20, 0.18);
+    --glass-border-navy: rgba(28, 23, 20, 0.05);
+
+    --shadow-sm: 0 2px 12px rgba(28, 23, 20, 0.06);
+    --shadow-md: 0 8px 32px rgba(28, 23, 20, 0.09);
+    --shadow-lg: 0 20px 60px rgba(28, 23, 20, 0.12);
+    --shadow-glow: 0 0 40px rgba(184, 116, 26, 0.1), 0 8px 32px rgba(28, 23, 20, 0.08);
+    --shadow-brutal: 5px 5px 0px 0px var(--color-primary);
 }

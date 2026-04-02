@@ -1,5 +1,5 @@
 /* ========================================
-   TYPOGRAPHY
+   TYPOGRAPHY — DARK LUXURY EDITORIAL
    ======================================== */
 h1,
 h2,
@@ -8,27 +8,28 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-primary);
     line-height: var(--lh-tight);
-    letter-spacing: -0.03em;
+    letter-spacing: 0.01em;
     margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
 }
 
 h1 {
     font-size: var(--fs-h1);
-    text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 800;
+    letter-spacing: 0.02em;
 }
 
 h2 {
     font-size: var(--fs-h2);
-    text-transform: uppercase;
+    font-weight: 700;
 }
 
 h3 {
     font-size: var(--fs-h3);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 p {
@@ -36,7 +37,7 @@ p {
     line-height: var(--lh-base);
     margin-bottom: 1.5rem;
     font-size: var(--fs-body);
-    font-weight: 400;
+    font-weight: 300;
     max-width: 65ch;
 }
 
@@ -47,7 +48,7 @@ a {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--color-primary) 100%);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 50%, var(--color-secondary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -57,7 +58,7 @@ a {
 
 .highlight {
     position: relative;
-    color: var(--text-primary);
+    color: var(--color-primary);
     z-index: 1;
 }
 
@@ -67,14 +68,14 @@ a {
     left: 0;
     bottom: 0.1em;
     width: 100%;
-    height: 0.3em;
+    height: 0.25em;
     background: var(--color-primary-glow);
     z-index: -1;
     transition: var(--transition-base);
 }
 
 .highlight:hover::after {
-    height: 0.8em;
+    height: 0.7em;
 }
 
 .section-title {
@@ -83,18 +84,22 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-heading);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
 }
 
 .section-title::before {
-    content: '/// ' attr(data-label);
+    content: attr(data-label);
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.62rem;
     color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.2em;
-    font-weight: 700;
+    margin-bottom: 0.85rem;
+    letter-spacing: 0.32em;
+    font-weight: 500;
     text-transform: uppercase;
+    opacity: 0.7;
 }
 
 .section-subtitle {
@@ -102,14 +107,27 @@ a {
     max-width: 600px;
     margin-bottom: var(--spacing-lg);
     font-family: var(--font-body);
-    font-size: 1.125rem;
+    font-size: 1.05rem;
+    font-weight: 300;
     color: var(--text-secondary);
-    border-left: 3px solid var(--color-primary);
+    border-left: 1.5px solid rgba(212, 168, 75, 0.45);
     padding-left: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.75;
+    position: relative;
 }
 
-/* --- MOBILE TYPOGRAPHY --- */
+.section-subtitle::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 1.5px;
+    height: 40%;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     p {
         max-width: 100%;
@@ -124,7 +142,7 @@ a {
         text-align: center;
         border-left: none;
         padding-left: 0;
-        border-bottom: 3px solid var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
         padding-bottom: 1rem;
     }
 }
