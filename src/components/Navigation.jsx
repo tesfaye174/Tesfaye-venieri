@@ -1,17 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
     const [expanded, setExpanded] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+    const [progress, setProgress] = useState(0);
+    const [theme, setTheme] = useState(() => {
+        const saved = localStorage.getItem('portfolio-theme');
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    });
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+    }, [theme]);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
 
-            // Active section tracking
-            const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+
+            const sections = ['home', 'about', 'projects', 'skills', 'contact'];
             const current = sections.find(section => {
                 const element = document.getElementById(section);
                 if (element) {
@@ -23,83 +37,102 @@ const Navigation = () => {
             if (current) setActiveSection(current);
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const closeNav = () => setExpanded(false);
+    const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
 
     return (
-        <Navbar
-            expand="lg"
-            fixed="top"
-            className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
-            expanded={expanded}
-            onToggle={(isExpanded) => setExpanded(isExpanded)}
-        >
-            <Container className="nav-container">
-                <Navbar.Brand href="#home" className="logo" aria-label="Tesfaye Venieri Home">
-                    <div className="logo-icon-box">
-                        <img src="/assets/img/logo.png" alt="Logo" className="logo-img" />
-                    </div>
-                    <div className="logo-text-box">
-                        Tesfaye
-                    </div>
-                </Navbar.Brand>
+        <>
+            <div
+                className="scroll-progress-bar"
+                style={{ width: `${progress}%` }}
+                aria-hidden="true"
+            />
+            <Navbar
+                expand="lg"
+                fixed="top"
+                className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
+                expanded={expanded}
+                onToggle={(isExpanded) => setExpanded(isExpanded)}
+            >
+                <Container className="nav-container">
+                    <Navbar.Brand href="#home" className="logo" aria-label="Tesfaye Venieri — Home">
+                        <div className="logo-icon-box">
+                            <img src="/assets/img/logo.png" alt="TV logo" className="logo-img" />
+                        </div>
+                        <div className="logo-text-box">Tesfaye</div>
+                    </Navbar.Brand>
 
-                <Navbar.Toggle
-                    aria-controls="basic-navbar-nav"
-                    className="navbar-toggler"
-                    aria-label="Toggle navigation"
-                >
-                    <div className={`hamburger ${expanded ? 'active' : ''}`}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </Navbar.Toggle>
+                    <Navbar.Toggle
+                        aria-controls="main-navbar-nav"
+                        className="navbar-toggler"
+                        aria-label="Apri menu di navigazione"
+                    >
+                        <div className={`hamburger ${expanded ? 'active' : ''}`}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </Navbar.Toggle>
 
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto nav-menu">
-                        <Nav.Link
-                            href="#home"
-                            className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-                            onClick={closeNav}
-                        >
-                            // Home
-                        </Nav.Link>
-                        <Nav.Link
-                            href="#about"
-                            className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-                            onClick={closeNav}
-                        >
-                            // Viaggio
-                        </Nav.Link>
-                        <Nav.Link
-                            href="#skills"
-                            className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
-                            onClick={closeNav}
-                        >
-                            // Toolkit
-                        </Nav.Link>
-                        <Nav.Link
-                            href="#projects"
-                            className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-                            onClick={closeNav}
-                        >
-                            // Lavori
-                        </Nav.Link>
-                        <Nav.Link
-                            href="#contact"
-                            className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-                            onClick={closeNav}
-                        >
-                            // Contatti
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                    <Navbar.Collapse id="main-navbar-nav">
+                        <Nav className="ms-auto nav-menu align-items-lg-center">
+                            <Nav.Link
+                                href="#home"
+                                className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
+                                onClick={closeNav}
+                                aria-label="Vai all'inizio"
+                            >
+                                // Home
+                            </Nav.Link>
+                            <Nav.Link
+                                href="#about"
+                                className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+                                onClick={closeNav}
+                                aria-label="Vai al viaggio"
+                            >
+                                // Viaggio
+                            </Nav.Link>
+                            <Nav.Link
+                                href="#projects"
+                                className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
+                                onClick={closeNav}
+                                aria-label="Vai ai progetti"
+                            >
+                                // Lavori
+                            </Nav.Link>
+                            <Nav.Link
+                                href="#skills"
+                                className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
+                                onClick={closeNav}
+                                aria-label="Vai alle competenze"
+                            >
+                                // Toolkit
+                            </Nav.Link>
+                            <button
+                                className="theme-toggle"
+                                onClick={toggleTheme}
+                                aria-label={theme === 'dark' ? 'Passa alla modalità chiara' : 'Passa alla modalità scura'}
+                                title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+                            >
+                                {theme === 'dark' ? <FaSun /> : <FaMoon />}
+                            </button>
+                            <a
+                                href="#contact"
+                                className="nav-cta"
+                                onClick={closeNav}
+                                aria-label="Vai ai contatti"
+                            >
+                                Parliamo
+                            </a>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
     );
 };
 

@@ -1,0 +1,204 @@
+/* ============================================
+   THEME TRANSITIONS & LIGHT MODE OVERRIDES
+   Component-level overrides for hardcoded colors
+   ============================================ */
+
+/* Smooth theme transition on structural elements only */
+html,
+body,
+.hero,
+.about,
+.skills,
+.projects,
+.contact,
+footer,
+.navbar-custom,
+.navbar-custom.scrolled,
+.timeline-content,
+.skill-category,
+.project-card-mini,
+.contact-form-side,
+.contact-card,
+.stat-card,
+.footer {
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        color 0.25s ease,
+        box-shadow 0.35s ease;
+}
+
+/* ============================================
+   BODY TEXTURE — LIGHT MODE
+   ============================================ */
+[data-theme="light"] body::before {
+    background-image:
+        linear-gradient(45deg, rgba(184, 116, 26, 0.022) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(184, 116, 26, 0.022) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(184, 116, 26, 0.022) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(184, 116, 26, 0.022) 75%);
+}
+
+/* ============================================
+   SCROLLBAR — LIGHT MODE
+   ============================================ */
+[data-theme="light"] ::-webkit-scrollbar-track {
+    background: var(--bg-soft);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: rgba(184, 116, 26, 0.2);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* ============================================
+   HERO — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .hero::before {
+    background:
+        radial-gradient(ellipse 60% 50% at 75% 20%, rgba(184, 116, 26, 0.07), transparent),
+        radial-gradient(ellipse 50% 60% at 15% 75%, rgba(160, 69, 53, 0.05), transparent);
+}
+
+[data-theme="light"] .hero::after {
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    opacity: 0.25;
+}
+
+[data-theme="light"] .hero-visual-container {
+    box-shadow: 0 8px 40px rgba(28, 23, 20, 0.12);
+}
+
+[data-theme="light"] .visual-float-marker {
+    background: var(--bg-soft) !important;
+}
+
+/* ============================================
+   NAVIGATION — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .navbar-custom.scrolled {
+    box-shadow: 0 4px 32px rgba(28, 23, 20, 0.08);
+}
+
+/* ============================================
+   PROJECT CARDS — LIGHT MODE GRADIENTS
+   ============================================ */
+[data-theme="light"] .project-gradient-1 {
+    background: linear-gradient(145deg, #EDE5D8 0%, #E0D4C0 50%, #D4C4A8 100%);
+}
+
+[data-theme="light"] .project-gradient-2 {
+    background: linear-gradient(145deg, #DDE3EB 0%, #CED6E0 50%, #BFC8D6 100%);
+}
+
+[data-theme="light"] .project-gradient-3 {
+    background: linear-gradient(145deg, #E8DDE5 0%, #DDD0DB 50%, #D0C0D0 100%);
+}
+
+[data-theme="light"] .project-overlay-mini {
+    background: rgba(250, 247, 242, 0.85);
+}
+
+[data-theme="light"] .project-gradient-title span {
+    color: rgba(28, 23, 20, 0.1);
+}
+
+[data-theme="light"] .project-card-mini:hover .project-gradient-title span {
+    color: rgba(28, 23, 20, 0.18);
+}
+
+[data-theme="light"] .project-card-mini:hover {
+    box-shadow: 0 16px 40px rgba(28, 23, 20, 0.1), 0 0 30px rgba(184, 116, 26, 0.05);
+}
+
+/* ============================================
+   TIMELINE — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .timeline-item:hover .timeline-content {
+    box-shadow: 0 8px 32px rgba(28, 23, 20, 0.08), -4px 0 20px rgba(184, 116, 26, 0.06);
+}
+
+[data-theme="light"] .timeline-item:hover .timeline-dot {
+    box-shadow: 0 0 0 2px var(--bg-main), 0 0 20px rgba(184, 116, 26, 0.3);
+}
+
+/* ============================================
+   SKILL CARDS — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .skill-category:hover {
+    box-shadow: 0 16px 40px rgba(28, 23, 20, 0.08), 0 0 30px rgba(184, 116, 26, 0.05);
+}
+
+/* ============================================
+   STAT CARDS — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .stat-card:hover {
+    box-shadow: 0 16px 40px rgba(28, 23, 20, 0.08), 0 0 24px rgba(184, 116, 26, 0.05);
+}
+
+/* ============================================
+   CONTACT FORM — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .form-field input,
+[data-theme="light"] .form-field textarea {
+    border-bottom-color: rgba(28, 23, 20, 0.15);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .contact-card:hover {
+    box-shadow: 0 8px 32px rgba(28, 23, 20, 0.08), 0 0 20px rgba(184, 116, 26, 0.04);
+}
+
+/* ============================================
+   FOOTER — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .footer-social-link:hover {
+    box-shadow: 0 4px 16px rgba(28, 23, 20, 0.08);
+}
+
+/* ============================================
+   SCROLL TO TOP — LIGHT MODE
+   ============================================ */
+[data-theme="light"] .scroll-to-top:hover {
+    box-shadow: 0 8px 24px rgba(28, 23, 20, 0.1);
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+.theme-toggle {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 0.75rem;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: rgba(212, 168, 75, 0.1);
+    color: var(--color-primary);
+    border-color: rgba(212, 168, 75, 0.3);
+    transform: rotate(22deg) scale(1.05);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    background: rgba(184, 116, 26, 0.1);
+    border-color: rgba(184, 116, 26, 0.3);
+}
+
+@media (max-width: 991.98px) {
+    .theme-toggle {
+        margin: 0.5rem 0 0;
+    }
+}

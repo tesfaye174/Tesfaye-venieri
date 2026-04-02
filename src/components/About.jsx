@@ -24,7 +24,7 @@ const About = () => {
             year: "ORIGIN",
             title: "L'Origine",
             role: "Da Addis Abeba al Mondo",
-            location: "Addis Abeba, Etiopia",
+            location: "Addis Abeba, Etiopia — 9.03° N, 38.74° E",
             description: "Nato ad Addis Abeba, cresciuto tra due culture. Il viaggio dall'Etiopia all'Italia mi ha insegnato l'adattabilità, la resilienza e il valore di ogni opportunità. Tesfaye significa Speranza — e porto questo significato in tutto ciò che faccio.",
             icon: <FaGraduationCap />
         }
@@ -46,13 +46,26 @@ const About = () => {
                                 <div className="timeline-icon-mobile">{exp.icon}</div>
                                 <span className="timeline-role">{exp.role}</span>
                                 <h3>{exp.title}</h3>
-                                <div className="timeline-location">
-                                    {exp.location}
-                                </div>
+                                <div className="timeline-location">{exp.location}</div>
                                 <p>{exp.description}</p>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="about-stats" data-aos="fade-up" data-aos-delay="200">
+                    <div className="stat-card">
+                        <span className="stat-number">9</span>
+                        <span className="stat-label">Progetti</span>
+                    </div>
+                    <div className="stat-card">
+                        <span className="stat-number">3</span>
+                        <span className="stat-label">Lingue</span>
+                    </div>
+                    <div className="stat-card">
+                        <span className="stat-number">1</span>
+                        <span className="stat-label">Missione</span>
+                    </div>
                 </div>
             </Container>
         </section>

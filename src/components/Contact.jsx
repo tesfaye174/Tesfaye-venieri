@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Alert } from 'react-bootstrap';
-import { FaEnvelope, FaLinkedin, FaCaretRight } from 'react-icons/fa';
+import { Container, Row, Col, Alert } from 'react-bootstrap';
+import { FaEnvelope, FaLinkedin, FaGithub, FaCaretRight } from 'react-icons/fa';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -9,17 +9,17 @@ const Contact = () => {
         message: ''
     });
     const [status, setStatus] = useState({ type: null, message: '' });
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
         setStatus({ type: 'info', message: 'Invio in corso...' });
 
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
 
@@ -28,8 +28,6 @@ const Contact = () => {
             if (response.ok && data.success) {
                 setStatus({ type: 'success', message: data.message });
                 setFormData({ name: '', email: '', message: '' });
-
-                // Clear success message after 5 seconds
                 setTimeout(() => setStatus({ type: null, message: '' }), 5000);
             } else {
                 throw new Error(data.error || 'Si è verificato un errore durante l\'invio.');
@@ -37,6 +35,8 @@ const Contact = () => {
         } catch (error) {
             console.error('Contact Error:', error);
             setStatus({ type: 'danger', message: error.message || 'Errore di connessione. Riprova più tardi.' });
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -47,23 +47,29 @@ const Contact = () => {
                     <Col lg={5} data-aos="fade-right">
                         <div className="contact-info-side">
                             <h2 className="contact-title">
-                                Parliamo del Tuo <br />
-                                Prossimo Progetto.
+                                Cerco Stage.<br />
+                                Parliamo.
                             </h2>
                             <p className="contact-subtitle">
-                                Sempre aperto a nuove sfide e collaborazioni nel mondo tech e manageriale.
+                                Cerco opportunità di stage 2026 dove unire competenze full-stack e visione strategica.
+                                Scrivi pure in italiano, inglese o amarico.
                             </p>
 
                             <div className="contact-grid">
                                 <div className="contact-card">
-                                    <FaEnvelope />
+                                    <FaEnvelope aria-hidden="true" />
                                     <h4>Email</h4>
-                                    <a href="mailto:tesfaye.venieri@studio.unibo.it">Scrivimi</a>
+                                    <a href="mailto:tesfaye.venieri@studio.unibo.it" aria-label="Invia email a Tesfaye Venieri">Scrivimi</a>
                                 </div>
                                 <div className="contact-card">
-                                    <FaLinkedin />
+                                    <FaLinkedin aria-hidden="true" />
                                     <h4>LinkedIn</h4>
-                                    <a href="https://linkedin.com/in/tesfaye-venieri" target="_blank" rel="noopener noreferrer">Connettiamoci</a>
+                                    <a href="https://linkedin.com/in/tesfaye-venieri" target="_blank" rel="noopener noreferrer" aria-label="Profilo LinkedIn di Tesfaye Venieri">Connettiamoci</a>
+                                </div>
+                                <div className="contact-card">
+                                    <FaGithub aria-hidden="true" />
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/tesfaye174" target="_blank" rel="noopener noreferrer" aria-label="Profilo GitHub di Tesfaye Venieri">Guarda il codice</a>
                                 </div>
                             </div>
                         </div>
@@ -72,54 +78,62 @@ const Contact = () => {
                     <Col lg={7} data-aos="fade-left">
                         <div className="contact-form-side">
                             {status.type && (
-                                <Alert variant={status.type === 'success' ? 'success' : 'dark'} className="mb-4">
+                                <Alert variant={status.type === 'success' ? 'success' : 'dark'} className="mb-4" role="alert">
                                     {status.message}
                                 </Alert>
                             )}
 
-                            <Form onSubmit={handleSubmit} className="contact-form">
+                            <form onSubmit={handleSubmit} className="contact-form" noValidate>
                                 <div className="form-field">
-                                    <label>Nome e Cognome</label>
+                                    <label htmlFor="contact-name">Nome e Cognome</label>
                                     <input
+                                        id="contact-name"
                                         type="text"
                                         required
+                                        autoComplete="name"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         placeholder="Es. Mario Rossi"
+                                        aria-required="true"
                                     />
-                                    <div className="input-focus-line"></div>
+                                    <div className="input-focus-line" aria-hidden="true"></div>
                                 </div>
 
                                 <div className="form-field">
-                                    <label>Email Istituzionale / Lavorativa</label>
+                                    <label htmlFor="contact-email">Email</label>
                                     <input
+                                        id="contact-email"
                                         type="email"
                                         required
+                                        autoComplete="email"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         placeholder="Es. mario.rossi@azienda.it"
+                                        aria-required="true"
                                     />
-                                    <div className="input-focus-line"></div>
+                                    <div className="input-focus-line" aria-hidden="true"></div>
                                 </div>
 
                                 <div className="form-field">
-                                    <label>Il Tuo Messaggio</label>
+                                    <label htmlFor="contact-message">Messaggio</label>
                                     <textarea
-                                        rows="1"
+                                        id="contact-message"
+                                        rows="4"
                                         required
                                         value={formData.message}
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                         onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}
-                                        placeholder="Come posso aiutarti?"
+                                        placeholder="Di cosa hai bisogno?"
                                         style={{ overflow: 'hidden', resize: 'none' }}
+                                        aria-required="true"
                                     />
-                                    <div className="input-focus-line"></div>
+                                    <div className="input-focus-line" aria-hidden="true"></div>
                                 </div>
 
-                                <button type="submit" className="btn-submit">
-                                    Invia Messaggio <FaCaretRight />
+                                <button type="submit" className="btn-submit" disabled={isLoading} aria-label="Invia il messaggio">
+                                    {isLoading ? 'Invio in corso...' : <><span>Invia Messaggio</span> <FaCaretRight aria-hidden="true" /></>}
                                 </button>
-                            </Form>
+                            </form>
                         </div>
                     </Col>
                 </Row>

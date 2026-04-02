@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#FFFFFF">
+    <meta name="theme-color" content="#0C0B09">
     <meta name="description"
         content="Tesfaye Venieri - Studente di Informatica per il Management @ UniBo. Sviluppatore Full-Stack specializzato nell'unione tra tech e business strategy. Coding the Future with Hope.">
     <meta name="keywords"
@@ -14,11 +14,20 @@
     <link rel="canonical" href="https://tesfayevenieri.vercel.app/">
 
     <style>
-        body {
-            background-color: #FFFFFF;
-            margin: 0;
-        }
+        body { background-color: #0C0B09; margin: 0; }
+        [data-theme="light"] body { background-color: #FAF7F2; }
     </style>
+
+    <!-- Theme init: run before CSS to prevent flash of wrong theme -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('portfolio-theme');
+            var preferLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+            var theme = saved || (preferLight ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+            if (theme === 'light') document.body && (document.body.style.backgroundColor = '#FAF7F2');
+        })();
+    </script>
 
     <!-- SEO Open Graph (Facebook/LinkedIn) -->
     <meta property="og:title" content="Tesfaye Venieri | Portfolio - Coding the Future with Hope">
@@ -47,7 +56,7 @@
 
     <!-- Fonts Cache -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Outfit:wght@800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Barlow+Condensed:wght@600;700;800&family=Jost:wght@300;400;500;600&family=Fira+Code:wght@400;500;700&display=swap"
         rel="stylesheet">
 
 </head>

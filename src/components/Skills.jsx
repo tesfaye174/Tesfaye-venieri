@@ -1,31 +1,25 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaLaptopCode, FaDatabase, FaCogs, FaMobileAlt } from 'react-icons/fa';
+import { FaLaptopCode, FaTools, FaChess } from 'react-icons/fa';
 
 const Skills = () => {
     const skillGroups = [
         {
             id: "01",
-            title: "Linguaggi & Sviluppo",
+            title: "Development",
             icon: <FaLaptopCode />,
-            tags: ["Java", "Kotlin", "PHP", "JavaScript", "React.js", "HTML5 & CSS3"]
+            tags: ["Java", "Kotlin", "JavaScript", "React", "HTML5 & CSS3", "C", "SQL", "PHP"]
         },
         {
             id: "02",
-            title: "Data & Infrastruttura",
-            icon: <FaDatabase />,
-            tags: ["MySQL", "MongoDB", "XAMPP", "Git & GitHub", "Maven", "Linux/Bash"]
+            title: "Tools & Platform",
+            icon: <FaTools />,
+            tags: ["Git & GitHub", "Node.js / Express", "PostgreSQL", "MySQL", "Android Studio", "VS Code", "IntelliJ", "Figma", "Maven"]
         },
         {
             id: "03",
-            title: "Mobile & Architettura",
-            icon: <FaMobileAlt />,
-            tags: ["Android Jetpack", "Google Maps API", "CameraX", "Socket TCP", "Multithreading", "REST APIs"]
-        },
-        {
-            id: "04",
-            title: "Management & Metodologie",
-            icon: <FaCogs />,
-            tags: ["Agile/Scrum", "UML & Design Patterns", "GRASP/SOLID", "Business Analysis", "Problem Solving"]
+            title: "Strategic",
+            icon: <FaChess />,
+            tags: ["Design Patterns", "RESTful APIs", "Database Design", "Software Architecture", "Problem Solving", "Agile / Scrum", "UML", "GRASP / SOLID"]
         }
     ];
 
@@ -38,8 +32,9 @@ const Skills = () => {
 
                 <Row className="g-4 g-lg-5">
                     {skillGroups.map((group, index) => (
-                        <Col key={index} xs={12} md={6} lg={3} data-aos="fade-up" data-aos-delay={index * 100}>
+                        <Col key={index} xs={12} md={6} lg={4} data-aos="fade-up" data-aos-delay={index * 100}>
                             <div className="skill-category">
+                                <div className="skill-id">{group.id}</div>
                                 <div className="skill-icon">
                                     {group.icon}
                                 </div>

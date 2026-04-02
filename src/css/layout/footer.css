@@ -1,17 +1,18 @@
-/* ========================================
-   LAYOUT: FOOTER (MODERN CLEAN)
-   ======================================== */
+/* ============================================
+   FOOTER — DARK LUXURY
+   ============================================ */
 .footer {
     background: var(--bg-soft);
     color: var(--text-primary);
     padding: 0;
     overflow: hidden;
-    border-top: 2px solid var(--color-secondary);
+    border-top: 1px solid var(--glass-border);
 }
 
 .footer-top-border {
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    opacity: 0.4;
 }
 
 .footer-main {
@@ -24,33 +25,36 @@
 }
 
 .footer-logo h2 {
-    font-size: 1.75rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
     color: var(--text-primary);
     margin-bottom: 1.25rem;
-    letter-spacing: -0.03em;
-    font-weight: 900;
-    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    font-style: italic;
+    text-transform: none;
 }
 
 .footer-logo p {
-    color: var(--text-secondary);
-    max-width: 300px;
-    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 280px;
+    font-size: 0.85rem;
     line-height: 1.7;
+    font-weight: 300;
 }
 
 .footer-heading {
     font-family: var(--font-mono);
-    color: var(--color-secondary);
-    font-size: 0.65rem;
+    color: var(--color-primary);
+    font-size: 0.6rem;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    letter-spacing: 0.12em;
-    font-weight: 700;
-    opacity: 1;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+    opacity: 0.75;
 }
 
 .footer-links {
@@ -60,17 +64,17 @@
 }
 
 .footer-links a {
-    color: var(--text-secondary);
-    font-weight: 600;
+    color: var(--text-muted);
+    font-weight: 500;
     text-transform: uppercase;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
     transition: var(--transition-base);
 }
 
 .footer-links a:hover {
-    color: var(--text-primary);
+    color: var(--color-primary);
     transform: translateX(3px);
 }
 
@@ -83,21 +87,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    background: var(--bg-main);
-    border: 2px solid var(--color-secondary);
-    color: var(--color-secondary);
-    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    font-size: 0.95rem;
     transition: var(--transition-base);
     border-radius: var(--radius-sm);
     cursor: pointer;
 }
 
 .footer-social-link:hover {
-    background: var(--color-secondary);
-    color: var(--text-on-dark);
-    border-color: var(--color-secondary);
+    background: rgba(212, 168, 75, 0.1);
+    color: var(--color-primary);
+    border-color: rgba(212, 168, 75, 0.3);
     transform: translateY(-3px);
 }
 
@@ -112,9 +116,9 @@
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     color: var(--text-muted);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
 }
 
 .status-badge {
@@ -124,8 +128,8 @@
 }
 
 .status-badge .pulse {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
 }
 
 @media (max-width: 992px) {
