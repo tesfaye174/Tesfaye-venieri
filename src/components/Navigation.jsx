@@ -137,13 +137,14 @@ const Navigation = () => {
                 <div className="nav-container">
                     <a href="#home" className="logo" aria-label="Tesfaye Venieri — Home" onClick={closeNav}>
                         <div className="logo-icon-box">
-                            <img src="/assets/img/logo.png" alt="TV logo" className="logo-img" />
+                            <img src="/assets/img/logo.png" alt="TV logo" className="logo-img" decoding="async" />
                         </div>
                         <div className="logo-text-box">Tesfaye</div>
                     </a>
 
                     <button
                         className="navbar-toggler"
+                        type="button"
                         onClick={toggleNav}
                         aria-label={expanded ? "Chiudi menu di navigazione" : "Apri menu di navigazione"}
                         aria-expanded={expanded}
@@ -169,7 +170,8 @@ const Navigation = () => {
                             <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={closeNav}>Lavori</a>
                             <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`} onClick={closeNav}>Toolkit</a>
                             <button 
-                                className="theme-toggle" 
+                                className="theme-toggle"
+                                type="button" 
                                 onClick={toggleTheme} 
                                 aria-label={theme === 'dark' ? 'Passa alla modalità chiara' : 'Passa alla modalità scura'} 
                                 title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
@@ -186,3 +188,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+

@@ -32,7 +32,7 @@ const Footer = () => {
                             <a href="https://github.com/tesfaye174" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Github"><FaGithub /></a>
                             <a href="https://linkedin.com/in/tesfaye-venieri" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="LinkedIn"><FaLinkedin /></a>
                             <a href="mailto:tesfaye.venieri@studio.unibo.it" className="footer-social-link" aria-label="Email"><FaEnvelope /></a>
-                            <button onClick={scrollToTop} className="footer-social-link" aria-label="Scroll to top"><FaCaretUp /></button>
+                            <button type="button" onClick={scrollToTop} className="footer-social-link" aria-label="Scroll to top"><FaCaretUp /></button>
                         </div>
                     </div>
                 </div>

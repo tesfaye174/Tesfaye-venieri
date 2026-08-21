@@ -46,6 +46,7 @@ class ErrorBoundary extends Component {
                         Qualcosa è andato storto. Riprova più tardi.
                     </p>
                     <button
+                        type="button"
                         onClick={() => window.location.reload()}
                         style={{
                             padding: '0.8rem 2rem',
