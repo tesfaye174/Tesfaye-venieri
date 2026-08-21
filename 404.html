@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Pagina Non Trovata | Tesfaye Venieri</title>
     <meta name="robots" content="noindex, nofollow">
-
-    <!-- CSS (Inline for single page performance) -->
     <style>
         :root {
-            --bg-dark: #003366;
-            --color-primary: #FF6600;
+            --bg-main: #0C0B09;
+            --color-primary: #C89B3C;
+            --color-primary-light: #D4A84B;
             --color-white: #ffffff;
-            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+            --text-secondary: #A89F96;
+            --font-body: 'Jost', 'Helvetica Neue', sans-serif;
         }
 
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-main);
             color: var(--color-white);
             font-family: var(--font-body);
             height: 100vh;
@@ -50,10 +50,11 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             font-weight: 300;
+            color: var(--text-secondary);
         }
 
         p {
-            color: #a3c4e0;
+            color: var(--text-secondary);
             margin-bottom: 2rem;
             max-width: 400px;
             margin-left: auto;
@@ -64,16 +65,17 @@
             display: inline-block;
             padding: 0.8rem 2rem;
             background: var(--color-primary);
-            color: white;
+            color: var(--color-white);
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: var(--radius-sm, 50px);
             font-weight: 600;
+            font-family: var(--font-body);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px rgba(255, 102, 0, 0.5);
+            box-shadow: 0 10px 20px -10px rgba(200, 155, 60, 0.5);
         }
 
         @keyframes fadeIn {

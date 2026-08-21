@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import { FaGraduationCap, FaBriefcase, FaCode } from 'react-icons/fa';
 
 const About = () => {
@@ -32,7 +31,7 @@ const About = () => {
 
     return (
         <section className="about" id="about">
-            <Container>
+            <div className="container">
                 <div className="section-head" data-aos="fade-right">
                     <h2 className="section-title" data-label="JOURNEY">Il Mio Viaggio</h2>
                 </div>
@@ -59,15 +58,15 @@ const About = () => {
                         <span className="stat-label">Progetti</span>
                     </div>
                     <div className="stat-card">
-                        <span className="stat-number">3</span>
+                        <span className="stat-number">3+</span>
                         <span className="stat-label">Lingue</span>
                     </div>
                     <div className="stat-card">
                         <span className="stat-number">1</span>
-                        <span className="stat-label">Missione</span>
+                        <span className="stat-label">Visione</span>
                     </div>
                 </div>
-            </Container>
+            </div>
         </section>
     );
 };

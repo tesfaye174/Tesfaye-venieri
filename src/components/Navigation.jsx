@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Navigation = () => {
@@ -13,6 +12,10 @@ const Navigation = () => {
         return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
     });
 
+    const navRef = useRef(null);
+    const observerRef = useRef(null);
+    const menuRef = useRef(null);
+
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('portfolio-theme', theme);
@@ -21,28 +24,101 @@ const Navigation = () => {
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
-
             const total = document.documentElement.scrollHeight - window.innerHeight;
             setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
-
-            const sections = ['home', 'about', 'projects', 'skills', 'contact'];
-            const current = sections.find(section => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top <= 150 && rect.bottom >= 150;
-                }
-                return false;
-            });
-            if (current) setActiveSection(current);
         };
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
+        let ticking = false;
+        const onScroll = () => {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+            }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    const closeNav = () => setExpanded(false);
-    const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    useEffect(() => {
+        const sections = ['home', 'about', 'projects', 'skills', 'contact'];
+        
+        observerRef.current = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: '-150px 0px -70% 0px',
+                threshold: 0
+            }
+        );
+
+        sections.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                observerRef.current.observe(element);
+            }
+        });
+
+        return () => {
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (expanded && menuRef.current) {
+            const focusableElements = menuRef.current.querySelectorAll(
+                'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+            );
+            if (focusableElements.length > 0) {
+                focusableElements[0].focus();
+            }
+        }
+    }, [expanded]);
+
+    const handleKeyDown = useCallback((e) => {
+        if (!expanded || !menuRef.current) return;
+
+        const focusableElements = menuRef.current.querySelectorAll(
+            'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.key === 'Escape') {
+            setExpanded(false);
+            return;
+        }
+
+        if (e.key === 'Tab') {
+            if (e.shiftKey && document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement?.focus();
+            } else if (!e.shiftKey && document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement?.focus();
+            }
+        }
+    }, [expanded]);
+
+    const closeNav = useCallback(() => setExpanded(false), []);
+
+    const toggleTheme = useCallback(() => {
+        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    }, []);
+
+    const toggleNav = useCallback(() => {
+        setExpanded(prev => !prev);
+    }, []);
 
     return (
         <>
@@ -51,87 +127,60 @@ const Navigation = () => {
                 style={{ width: `${progress}%` }}
                 aria-hidden="true"
             />
-            <Navbar
-                expand="lg"
-                fixed="top"
-                className={`navbar-custom ${scrolled ? 'scrolled' : ''}`}
-                expanded={expanded}
-                onToggle={(isExpanded) => setExpanded(isExpanded)}
+            <nav 
+                ref={navRef}
+                className={`navbar-custom ${scrolled ? 'scrolled' : ''}`} 
+                role="navigation" 
+                aria-label="Main navigation"
+                onKeyDown={handleKeyDown}
             >
-                <Container className="nav-container">
-                    <Navbar.Brand href="#home" className="logo" aria-label="Tesfaye Venieri — Home">
+                <div className="nav-container">
+                    <a href="#home" className="logo" aria-label="Tesfaye Venieri — Home" onClick={closeNav}>
                         <div className="logo-icon-box">
                             <img src="/assets/img/logo.png" alt="TV logo" className="logo-img" />
                         </div>
                         <div className="logo-text-box">Tesfaye</div>
-                    </Navbar.Brand>
+                    </a>
 
-                    <Navbar.Toggle
-                        aria-controls="main-navbar-nav"
+                    <button
                         className="navbar-toggler"
-                        aria-label="Apri menu di navigazione"
+                        onClick={toggleNav}
+                        aria-label={expanded ? "Chiudi menu di navigazione" : "Apri menu di navigazione"}
+                        aria-expanded={expanded}
+                        aria-controls="main-navbar-nav"
                     >
                         <div className={`hamburger ${expanded ? 'active' : ''}`}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                    </Navbar.Toggle>
+                    </button>
 
-                    <Navbar.Collapse id="main-navbar-nav">
-                        <Nav className="ms-auto nav-menu align-items-lg-center">
-                            <Nav.Link
-                                href="#home"
-                                className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-                                onClick={closeNav}
-                                aria-label="Vai all'inizio"
-                            >
-                                // Home
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#about"
-                                className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-                                onClick={closeNav}
-                                aria-label="Vai al viaggio"
-                            >
-                                // Viaggio
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#projects"
-                                className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-                                onClick={closeNav}
-                                aria-label="Vai ai progetti"
-                            >
-                                // Lavori
-                            </Nav.Link>
-                            <Nav.Link
-                                href="#skills"
-                                className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
-                                onClick={closeNav}
-                                aria-label="Vai alle competenze"
-                            >
-                                // Toolkit
-                            </Nav.Link>
-                            <button
-                                className="theme-toggle"
-                                onClick={toggleTheme}
-                                aria-label={theme === 'dark' ? 'Passa alla modalità chiara' : 'Passa alla modalità scura'}
+                    <div 
+                        ref={menuRef}
+                        className={`nav-collapse ${expanded ? 'expanded' : ''}`} 
+                        id="main-navbar-nav"
+                        aria-hidden={!expanded}
+                        aria-modal={expanded}
+                    >
+                        <div className="nav-menu">
+                            <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`} onClick={closeNav}>Home</a>
+                            <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} onClick={closeNav}>Viaggio</a>
+                            <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={closeNav}>Lavori</a>
+                            <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`} onClick={closeNav}>Toolkit</a>
+                            <button 
+                                className="theme-toggle" 
+                                onClick={toggleTheme} 
+                                aria-label={theme === 'dark' ? 'Passa alla modalità chiara' : 'Passa alla modalità scura'} 
                                 title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
                             >
                                 {theme === 'dark' ? <FaSun /> : <FaMoon />}
                             </button>
-                            <a
-                                href="#contact"
-                                className="nav-cta"
-                                onClick={closeNav}
-                                aria-label="Vai ai contatti"
-                            >
-                                Parliamo
-                            </a>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                            <a href="#contact" className="nav-cta" onClick={closeNav}>Parliamo</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </>
     );
 };

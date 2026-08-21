@@ -1,4 +1,3 @@
-import { Container, Row, Col } from 'react-bootstrap';
 import { FaLaptopCode, FaTools, FaChess } from 'react-icons/fa';
 
 const Skills = () => {
@@ -25,14 +24,19 @@ const Skills = () => {
 
     return (
         <section className="skills" id="skills">
-            <Container>
+            <div className="container">
                 <div className="section-head" data-aos="fade-right">
                     <h2 className="section-title" data-label="TOOLKIT">Competenze Tecniche</h2>
                 </div>
 
-                <Row className="g-4 g-lg-5">
+                <div className="skills-grid">
                     {skillGroups.map((group, index) => (
-                        <Col key={index} xs={12} md={6} lg={4} data-aos="fade-up" data-aos-delay={index * 100}>
+                        <div
+                            key={index}
+                            className="skill-col"
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
+                        >
                             <div className="skill-category">
                                 <div className="skill-id">{group.id}</div>
                                 <div className="skill-icon">
@@ -45,10 +49,10 @@ const Skills = () => {
                                     ))}
                                 </div>
                             </div>
-                        </Col>
+                        </div>
                     ))}
-                </Row>
-            </Container>
+                </div>
+            </div>
         </section>
     );
 };

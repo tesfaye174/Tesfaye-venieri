@@ -1,6 +1,6 @@
 /* ========================================
-   RESET & BASE STYLES — DARK LUXURY
-   ======================================== */
+    RESET & BASE STYLES — DARK LUXURY
+    ======================================== */
 *,
 *::before,
 *::after {
@@ -18,6 +18,8 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     background-color: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -27,8 +29,12 @@ body {
     line-height: var(--lh-base);
     overflow-x: hidden;
     position: relative;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    opacity: 0;
+    animation: bodyFadeIn 0.6s ease forwards;
+}
+
+@keyframes bodyFadeIn {
+    to { opacity: 1; }
 }
 
 /* Grain film texture — atmospheric depth layer */
@@ -43,7 +49,7 @@ body::before {
     background-size: 200px 200px;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.025;
+    opacity: 0.04;
 }
 
 /* Custom cursor */
@@ -135,6 +141,18 @@ a {
     outline: none;
 }
 
+/* Improved focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
 /* Skip to main content (screen reader) */
 .skip-link {
     position: absolute;
@@ -151,6 +169,7 @@ a {
     border-radius: var(--radius-sm);
     z-index: 9999;
     transition: top 0.2s ease;
+    box-shadow: 0 4px 16px rgba(212, 168, 75, 0.3);
 }
 
 .skip-link:focus {

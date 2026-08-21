@@ -11,7 +11,27 @@ export default defineConfig(({ mode }) => {
         build: {
             outDir: 'dist',
             assetsDir: 'assets',
+            sourcemap: 'hidden',
             minify: 'terser',
+            terserOptions: {
+                compress: {
+                    drop_console: true,
+                    drop_debugger: true
+                }
+            },
+            assetsInlineLimit: 4096,
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        'vendor': ['react', 'react-dom'],
+                        'three': ['three'],
+                        'remotion': ['remotion'],
+                        'remotion-cli': ['@remotion/cli'],
+                        'utils': ['aos', 'lenis']
+                    }
+                }
+            },
+            chunkSizeWarningLimit: 1000,
         },
         server: {
             port: 3000,
@@ -26,4 +46,3 @@ export default defineConfig(({ mode }) => {
         },
     };
 });
-

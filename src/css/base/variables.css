@@ -1,43 +1,46 @@
 :root {
     /* ============================================
-       COLOR PALETTE: DARK LUXURY — ADDIS TO BOLOGNA
-       Ethiopian amber gold on warm midnight
-       ============================================ */
+        COLOR PALETTE: DARK LUXURY — MODERN EDITION
+        Ethiopian amber gold on warm midnight
+        ============================================ */
 
-    /* Primary: Ethiopian Amber Gold */
-    --color-primary: #D4A84B;
-    --color-primary-dark: #B8902A;
-    --color-primary-light: #E8BF6A;
-    --color-primary-glow: rgba(212, 168, 75, 0.12);
+    /* Primary: Warm Amber Gold */
+    --color-primary: #C89B3C;
+    --color-primary-dark: #A67C2A;
+    --color-primary-light: #DDB85A;
+    --color-primary-glow: rgba(200, 155, 60, 0.1);
+    --color-primary-subtle: rgba(200, 155, 60, 0.06);
 
-    /* Secondary: Terracotta */
-    --color-secondary: #C4603C;
-    --color-secondary-dark: #A24E2E;
-    --color-secondary-light: #E07252;
-    --color-secondary-glow: rgba(196, 96, 60, 0.1);
+    /* Secondary: Warm terracotta */
+    --color-secondary: #B85C3A;
+    --color-secondary-dark: #9A4828;
+    --color-secondary-light: #D4744E;
+    --color-secondary-glow: rgba(184, 92, 58, 0.08);
 
-    --color-accent: #D4A84B;
-    --color-accent-glow: rgba(212, 168, 75, 0.08);
+    /* Accent: Soft gold */
+    --color-accent: #C89B3C;
+    --color-accent-glow: rgba(200, 155, 60, 0.06);
 
     /* Neutral Palette — Warm Dark */
-    --bg-main: #0C0B09;
-    --bg-soft: #151310;
-    --bg-card: #1C1916;
-    --bg-grid: rgba(212, 168, 75, 0.025);
-    --bg-navy-soft: rgba(212, 168, 75, 0.04);
+    --bg-main: #0A0908;
+    --bg-soft: #121110;
+    --bg-card: #1A1816;
+    --bg-elevated: #221F1C;
+    --bg-grid: rgba(200, 155, 60, 0.02);
+    --bg-navy-soft: rgba(200, 155, 60, 0.03);
 
-    --text-primary: #F5EFE4;
-    --text-secondary: #A89F96;
-    --text-muted: #5E574F;
-    --text-on-dark: #0C0B09;
+    --text-primary: #F0EBE0;
+    --text-secondary: #B0A89E;
+    --text-muted: #6E675F;
+    --text-on-dark: #0A0908;
 
     /* Glass & Borders */
-    --glass-bg: rgba(21, 19, 16, 0.88);
-    --glass-bg-dark: rgba(12, 11, 9, 0.96);
-    --glass-border: rgba(212, 168, 75, 0.1);
-    --glass-border-light: rgba(212, 168, 75, 0.22);
-    --glass-border-navy: rgba(212, 168, 75, 0.08);
-    --glass-blur: blur(20px);
+    --glass-bg: rgba(18, 17, 16, 0.85);
+    --glass-bg-dark: rgba(10, 9, 8, 0.94);
+    --glass-border: rgba(200, 155, 60, 0.08);
+    --glass-border-light: rgba(200, 155, 60, 0.18);
+    --glass-border-navy: rgba(200, 155, 60, 0.06);
+    --glass-blur: blur(24px);
 
     /* Typography */
     --font-display: 'Cormorant Garamond', 'Georgia', serif;
@@ -45,82 +48,88 @@
     --font-body: 'Jost', 'Helvetica Neue', sans-serif;
     --font-mono: 'Fira Code', 'Courier New', monospace;
 
-    --fs-h1: clamp(4.5rem, 14vw, 11rem);
-    --fs-h2: clamp(2.25rem, 5vw, 3.75rem);
-    --fs-h3: clamp(1.3rem, 2.5vw, 1.65rem);
-    --fs-body: 1rem;
-    --fs-small: 0.875rem;
+    --fs-h1: clamp(3.5rem, 12vw, 9rem);
+    --fs-h2: clamp(2rem, 4.5vw, 3.25rem);
+    --fs-h3: clamp(1.2rem, 2.2vw, 1.5rem);
+    --fs-body: 0.95rem;
+    --fs-small: 0.8rem;
+    --fs-xs: 0.65rem;
 
     --lh-tight: 0.92;
-    --lh-base: 1.72;
+    --lh-base: 1.75;
+    --lh-relaxed: 1.85;
 
     /* Spacing & Layout */
-    --container-width: 1200px;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 5rem;
-    --spacing-xl: 8rem;
+    --container-width: 1240px;
+    --spacing-xs: 0.375rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 7rem;
+    --spacing-2xl: 10rem;
 
     /* Design System */
     --radius-none: 0px;
-    --radius-sm: 3px;
-    --radius-md: 8px;
-    --radius-lg: 16px;
+    --radius-sm: 4px;
+    --radius-md: 10px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
     --radius-full: 9999px;
 
-    --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
-    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.7);
-    --shadow-glow: 0 0 40px rgba(212, 168, 75, 0.12);
-    --shadow-brutal: 5px 5px 0px 0px var(--color-primary);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 50px rgba(200, 155, 60, 0.08);
+    --shadow-brutal: 4px 4px 0px 0px var(--color-primary);
 
     --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
-    --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-base: 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-slow: 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ============================================
    LIGHT MODE — WARM EDITORIAL PARCHMENT
-   Inverted warmth: espresso on cream
    ============================================ */
 [data-theme="light"] {
-    --color-primary: #B8741A;
-    --color-primary-dark: #9A5E10;
-    --color-primary-light: #D4902A;
-    --color-primary-glow: rgba(184, 116, 26, 0.14);
+    --color-primary: #B8860B;
+    --color-primary-dark: #9A6F08;
+    --color-primary-light: #D4A020;
+    --color-primary-glow: rgba(184, 134, 11, 0.1);
+    --color-primary-subtle: rgba(184, 134, 11, 0.05);
 
-    --color-secondary: #A04535;
-    --color-secondary-dark: #823326;
-    --color-secondary-light: #C45545;
-    --color-secondary-glow: rgba(160, 69, 53, 0.1);
+    --color-secondary: #A04830;
+    --color-secondary-dark: #823820;
+    --color-secondary-light: #C46040;
+    --color-secondary-glow: rgba(160, 72, 48, 0.08);
 
-    --color-accent: #B8741A;
-    --color-accent-glow: rgba(184, 116, 26, 0.08);
+    --color-accent: #B8860B;
+    --color-accent-glow: rgba(184, 134, 11, 0.06);
 
-    --bg-main: #FAF7F2;
-    --bg-soft: #F1EBE1;
+    --bg-main: #FAF8F4;
+    --bg-soft: #F0EBE1;
     --bg-card: #FFFFFF;
-    --bg-grid: rgba(184, 116, 26, 0.03);
-    --bg-navy-soft: rgba(184, 116, 26, 0.05);
+    --bg-elevated: #F5F0E8;
+    --bg-grid: rgba(184, 134, 11, 0.02);
+    --bg-navy-soft: rgba(184, 134, 11, 0.03);
 
-    --text-primary: #1C1714;
-    --text-secondary: #4A3F37;
-    --text-muted: #9B8E85;
-    --text-on-dark: #FAF7F2;
+    --text-primary: #1A1612;
+    --text-secondary: #5A4F45;
+    --text-muted: #8E8378;
+    --text-on-dark: #FAF8F4;
 
-    --glass-bg: rgba(241, 235, 225, 0.92);
-    --glass-bg-dark: rgba(250, 247, 242, 0.97);
-    --glass-border: rgba(28, 23, 20, 0.09);
-    --glass-border-light: rgba(28, 23, 20, 0.18);
-    --glass-border-navy: rgba(28, 23, 20, 0.05);
+    --glass-bg: rgba(240, 235, 225, 0.92);
+    --glass-bg-dark: rgba(250, 248, 244, 0.96);
+    --glass-border: rgba(26, 22, 18, 0.08);
+    --glass-border-light: rgba(26, 22, 18, 0.15);
+    --glass-border-navy: rgba(26, 22, 18, 0.04);
 
-    --shadow-sm: 0 2px 12px rgba(28, 23, 20, 0.06);
-    --shadow-md: 0 8px 32px rgba(28, 23, 20, 0.09);
-    --shadow-lg: 0 20px 60px rgba(28, 23, 20, 0.12);
-    --shadow-glow: 0 0 40px rgba(184, 116, 26, 0.1), 0 8px 32px rgba(28, 23, 20, 0.08);
-    --shadow-brutal: 5px 5px 0px 0px var(--color-primary);
+    --shadow-sm: 0 2px 8px rgba(26, 22, 18, 0.06);
+    --shadow-md: 0 8px 30px rgba(26, 22, 18, 0.08);
+    --shadow-lg: 0 20px 60px rgba(26, 22, 18, 0.1);
+    --shadow-glow: 0 0 50px rgba(184, 134, 11, 0.08), 0 8px 32px rgba(26, 22, 18, 0.06);
+    --shadow-brutal: 4px 4px 0px 0px var(--color-primary);
 }

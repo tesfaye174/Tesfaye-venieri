@@ -1,7 +1,36 @@
-import { Container, Row, Col } from 'react-bootstrap';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useRef, useCallback } from 'react';
 
 const Projects = () => {
+    const cardRefs = useRef({});
+
+    const handleCardMouseMove = useCallback((e, projId) => {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+        const card = cardRefs.current[projId];
+        if (!card) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        card.style.transition = 'box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.55s cubic-bezier(0.16, 1, 0.3, 1)';
+        card.style.transform = `
+            perspective(800px)
+            rotateX(${y * -10}deg)
+            rotateY(${x * 14}deg)
+            scale3d(1.02, 1.02, 1.02)
+        `;
+    }, []);
+
+    const handleCardMouseLeave = useCallback((e, projId) => {
+        const card = cardRefs.current[projId];
+        if (!card) return;
+
+        card.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.55s cubic-bezier(0.16, 1, 0.3, 1)';
+        card.style.transform = '';
+    }, []);
+
     const projects = [
         {
             id: "01",
@@ -89,15 +118,25 @@ const Projects = () => {
 
     return (
         <section className="projects" id="projects">
-            <Container>
+            <div className="container">
                 <div className="section-head" data-aos="fade-right">
                     <h2 className="section-title" data-label="WORKS">Progetti Selezionati</h2>
                 </div>
 
-                <Row className="g-4 g-lg-5">
+                <div className="projects-grid">
                     {projects.map((proj, index) => (
-                        <Col key={proj.id} xs={12} md={6} lg={4} data-aos="fade-up" data-aos-delay={index * 80}>
-                            <div className="project-card-mini">
+                        <div
+                            key={proj.id}
+                            className="project-col"
+                            data-aos="fade-up"
+                            data-aos-delay={index * 80}
+                        >
+                            <div
+                                ref={(el) => cardRefs.current[proj.id] = el}
+                                className="project-card-mini"
+                                onMouseMove={(e) => handleCardMouseMove(e, proj.id)}
+                                onMouseLeave={(e) => handleCardMouseLeave(e, proj.id)}
+                            >
                                 <div className="project-image-mini">
                                     <div className={`project-img-display-mini ${proj.imageClass}`}>
                                         <div className="project-gradient-title">
@@ -105,7 +144,7 @@ const Projects = () => {
                                         </div>
                                     </div>
                                     <div className="project-overlay-mini">
-                                        <div className="d-flex gap-3">
+                                        <div className="project-links">
                                             <a href={proj.github} target="_blank" rel="noopener noreferrer" className="project-link-mini" aria-label={`Codice GitHub di ${proj.title}`}><FaGithub /></a>
                                             {proj.link && proj.link !== "#" && (
                                                 <a href={proj.link} className="project-link-mini" aria-label={`Demo di ${proj.title}`}><FaExternalLinkAlt /></a>
@@ -128,10 +167,10 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Col>
+                        </div>
                     ))}
-                </Row>
-            </Container>
+                </div>
+            </div>
         </section>
     );
 };

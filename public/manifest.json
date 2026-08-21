@@ -1,0 +1,21 @@
+{
+    "name": "Tesfaye Venieri Portfolio",
+    "short_name": "TV Portfolio",
+    "description": "Portfolio di Tesfaye Venieri - Full-Stack Developer",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A0908",
+    "theme_color": "#C89B3C",
+    "icons": [
+        {
+            "src": "/assets/img/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

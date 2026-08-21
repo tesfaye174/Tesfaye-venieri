@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "blender": {
+      "name": "Blender MCP Server",
+      "description": "Control Blender 3D from Claude Code via HTTP API",
+      "type": "http",
+      "url": "http://localhost:6789",
+      "enabled": true
+    }
+  }
+}
